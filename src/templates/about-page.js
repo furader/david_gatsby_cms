@@ -4,59 +4,55 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+export const AboutPageTemplate = ({ classes, content, title, colour }) => {
+  
 
-  return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+  return <div className="container clearfix">
+   <div className={classes} >
+     <h1>{title}</h1>
+
+  <div style={{ color: colour }}>
+      {content}
+  </div>
+
+</div> 
+</div>
 }
 
-AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
 
-const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
 
+const AboutPage = ({data}) => { 
+ console.log(data);
+ const { markdownRemark} = data;
+ 
+  var allFront = markdownRemark.frontmatter;
+  var colour = allFront.colour;
+  var cont = markdownRemark.internal.content;
+  var speClass = allFront.classes;
   return (
-    <Layout>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+      <AboutPageTemplate 
+       classes={speClass} content={cont} title={allFront.title} colour={colour}
       />
-    </Layout>
   )
-}
-
-AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
 }
 
 export default AboutPage
 
 export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+  query  {
+    markdownRemark(frontmatter: {title: {eq: "The about title"}}) {
+      id
       frontmatter {
+        category
+        classes
+        colour
+        date
+        description
+        templateKey
         title
+      }
+      internal {
+        content
       }
     }
   }

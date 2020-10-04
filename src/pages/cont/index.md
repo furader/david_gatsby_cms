@@ -2,6 +2,7 @@
 title: new tiiitle
 templateKey: index-page
 category: "sections"
+colour: "blue"
 description: hhhhhhhhhhhhhhhhh
 classes: col-12 bg-secondary
 ---

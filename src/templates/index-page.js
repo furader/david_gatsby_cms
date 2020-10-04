@@ -8,14 +8,14 @@ import BlogRoll from '../components/BlogRoll'
 
 
 
-export const IndexPageTemplate = ({ classes, content, front }) => {
+export const IndexPageTemplate = ({ classes, content, title, colour }) => {
 
   return <div className="container clearfix">
       <div className={classes} >
-          <h1>{front.title}</h1>
+          <h1>{title}</h1>
 
       </div>
-      <div style={{ color: "red" }}>
+      <div style={{ color: colour }}>
           {content}
       </div>
 
@@ -27,9 +27,10 @@ export const IndexPageTemplate = ({ classes, content, front }) => {
 
 const IndexPage = ({data}) => {
   var allFront = data.allMarkdownRemark.nodes[0].frontmatter;
+  var colour = allFront.colour;
   var cont = data.allMarkdownRemark.nodes[0].internal.content;
   var speClass = allFront.classes;
-  return <IndexPageTemplate classes={speClass} content={cont} front={allFront} />;
+  return <IndexPageTemplate classes={speClass} content={cont} title={allFront.title} colour={colour}/>;
 
 }
 export default IndexPage
@@ -43,6 +44,7 @@ query {
             category
             classes
             description
+            colour
           }
           internal {
             content
