@@ -1,0 +1,147 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Handling Updates
+-----------------------------------------------------------------*/
+@media (max-width: 450px) {
+	.dippi-mobile-bio {
+		font-size: 15px!important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+	}
+}
+
+.dippi-mobile-bio {
+  font-size: 27px;
+}
+
+div.dippi-class {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: ;
+    margin-left: 20px;
+}
+.counter + h5 {
+  color: #fff;
+}
+.team-title span {
+  color: #fc7208;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+/* .dippi {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+} */
+.bg-dr {
+    background-color: #303030!important;
+}
+
+.bg-dr-2 {
+    background-color: #C9C5C2!important;
+}
+
+.bg-dr-3 {
+		background-color: #F8F9F3!important;
+}
+
+.bg-dr-4 {
+		background-color: #303030!important;
+}
+
+.gradient {
+  background-image:
+    linear-gradient(
+      to right,
+      #C9C5C2, #fff
+    );
+}
+
+.gradient-2 {
+  background-image:
+    linear-gradient(
+      to right,
+      #F8F9F3, #fff
+    );
+}
+
+.dr {
+    color: #303030!important;
+}
+
+.dr-heading {
+    color: #303030!important;
+		font-size: 24px!important;
+		font-weight: 700!important;
+		line-height: 1.7!important;
+		font-family: 'Source Sans Pro', sans-serif;
+}
+
+a:hover {
+	color: #000072;
+}
+
+.heading-block h1, .heading-block h2, .heading-block h3, .heading-block h4, .emphasis-title h1, .emphasis-title h2 {
+    color: #303030;
+		font-size: 24px;
+		font-weight: 700!important;
+}
+.heading-block > span:not(.before-heading) {
+    color: #000072;
+}
+
+::selection {
+	background: #000072;
+}
+
+body {
+    color: #303030;
+		font-family: 'Source Sans Pro', sans-serif!important;
+}
+
+footer {
+	color: #303030!important;
+}
+
+/* BLUR */
+
+@media (max-width: 800px) {
+.dippi-blur {
+	filter: blur(1.5rem);
+}
+
+.blurred-img.blurred-image-visible {
+    display: none;
+}
+}
+.button:hover {
+    background-color: #000072;
+    color: #FFF!important;
+    border-color: transparent !important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.dark .button.button-border:not(.button-light) {
+    border-color: rgba(0,0,0,0.4);
+    color: rgba(0,0,0,0.5);
+}
+
+.button a:hover {
+    color: #fff!important;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    width: 8px;
+    height: 8px;
+    margin: 30px 4px 0 4px;
+    opacity: 0.5;
+    border-radius: 50%;
+    background-color: #000072!important;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
