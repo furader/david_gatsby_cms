@@ -4,14 +4,23 @@ import './all_css/style.css'
 import './all_css/css/custom.css'
 import './all_css/css/resume.css'
 import './all_css/css/resume_fonts.css'
+import im from '../../static/img/coffee.png'
+/*
 
+
+
+    <img className="section1Background" src="/img/coffee.png" alt="jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj" />
+       
+    */
 
 export const Section2Template = ({ idd1, idd2, classes, content, title, colour, imageData }) => {
 
 
 
-  return <section  className="nobg">
-            <div className="content-wrap nobottompadding nobg">
+  return <section  className="nobg" 
+  style={{background:"background: url('/static/img/coffee.png') no-repeat top center",
+backgroundSize:"cover", backgroundAttachment:"fixed",width:"100%"}}
+  >     <div className="content-wrap nobottompadding nobg">
               <div id={`section-skills`} className="section nomargin page-section dark nobg clearfix" style={{paddingBottom:"50px"}} >
                 <div className="container clearfix">
 

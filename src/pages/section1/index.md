@@ -15,4 +15,12 @@ description: wiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
 classes: col-12 bg-success
 image: /img/jumbotron.jpg
 ---
+an set a format on the date field in your config.yml. If you set a format, the date will be saved as a string in the markdown, instead of a MD date
+an set a format on the date field in your config.yml. If you set a format, the date will be saved as a string in the markdown, instead of a MD date
+an set a format on the date field in your config.yml. If you set a format, the date will be saved as a string in the markdown, instead of a MD date
+an set a format on the date field in your config.yml. If you set a format, the date will be saved as a string in the markdown, instead of a MD date
+an set a format on the date field in your config.yml. If you set a format, the date will be saved as a string in the markdown, instead of a MD date
+an set a format on the date field in your config.yml. If you set a format, the date will be saved as a string in the markdown, instead of a MD date
+an set a format on the date field in your config.yml. If you set a format, the date will be saved as a string in the markdown, instead of a MD date
+an set a format on the date field in your config.yml. If you set a format, the date will be saved as a string in the markdown, instead of a MD date
 an set a format on the date field in your config.yml. If you set a format, the date will be saved as a string in the markdown, instead of a MD date.
