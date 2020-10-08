@@ -14,7 +14,8 @@ export const Section1Template = (data) => {
 //const data = all.frontmatter;
 const imageData = data.background_image.childImageSharp.fluid;
 
-  return    < section id={`slider`} className="slider-element full-screen force-full-screen clearfix"
+  return  (   <div  className="myWrapper">
+  < section id={`slider`} className="slider-element full-screen force-full-screen clearfix"
       style={{ height: "100vh" }}
     >
       <BackgroundImage
@@ -82,7 +83,37 @@ const imageData = data.background_image.childImageSharp.fluid;
 
       </BackgroundImage>
     </section >
-}
+    <section id={`content`} className="nobg"  >
+    <div className="content-wrap nobottompadding nobg">
+      <div id={`section-skills`} className="section nomargin page-section dark nobg clearfix" style={{ paddingBottom: "50px" }} >
+        <div className="container clearfix">
+
+          <div className="row clearfix">
+            <div className="col-md-5 clearfix">
+              <div>
+                <h2 className="font-primary ls5" data-animate="fadeIn" style={{ color: "#303030", fontSize: "2.5rem", fontWeight: "700" }}
+                >{data.second_title}</h2>
+                <p data-animate="fadeIn" data-delay="400" style={{ color: "#404040", fontSize: "0.875rem", fontWeight: "500" }}> 
+                   {data.description1}</p>
+                <a data-animate="fadeIn" data-delay="400" className="team" data-toggle="modal" data-target=".bs-example-modal-lg2">
+                  <button className="bottommargin button button-large button-border button-white button-dark noleftmargin">
+                  {data.speaking_topics_link}</button></a>
+              </div>
+              <div data-animate="fadeIn" data-delay="800">
+                <p style={{ marginRight: "40px", color: "#303030", fontSize: "0875", fontWeight: "500" }}>
+                  <strong>{data.strong_text}</strong>
+                  {data.description2}</p>
+                <a href="mailto:web@davidrowan.com" className="button button-large button-border button-white button-dark noleftmargin"> Book David for your event</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  </div>
+  )}
 
 /*
 <li>Founding UK editor-in-chief, WIRED</li>
@@ -133,6 +164,12 @@ query {
       achievements {
         text
       }
+      second_title
+      description1
+      description2
+      speaking_topics_link
+      strong_text
+
     }
   }
       

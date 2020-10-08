@@ -26,13 +26,12 @@ const IndexPage = (a) => {
   const { data } = a;
   const section1 = data.section1;
 
-  return   <div  className="myWrapper">
+  return   <>
  <Section1Template
   {...section1.frontmatter}
   />
-<Section2Template />
+</>
 
-</div>
 
 
 }
@@ -60,6 +59,12 @@ query {
       achievements {
         text
       }
+      second_title
+      description1
+      description2
+      speaking_topics_link
+      strong_text
+
     }
   }
 }
