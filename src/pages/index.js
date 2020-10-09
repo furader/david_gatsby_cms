@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {  graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 
 
@@ -25,12 +25,14 @@ import { Section2Template } from '../templates/section2-page'
 const IndexPage = (a) => {
   const { data } = a;
   const section1 = data.section1;
+  const section2 = data.section2;
 
-  return   <>
- <Section1Template
-  {...section1.frontmatter}
-  />
-</>
+  return <>
+    <Section1Template
+      {...section1.frontmatter}
+    />
+    <Section2Template {...section2.frontmatter} />
+  </>
 
 
 
@@ -47,7 +49,7 @@ query {
       background_image {
         childImageSharp {
           fluid (maxWidth: 3000,quality: 100){
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
@@ -67,5 +69,23 @@ query {
 
     }
   }
+  section2: markdownRemark(frontmatter: {identifier: {eq: "section2"}}) {
+    frontmatter {
+      title
+      templateKey
+      identifier
+      testimonials {
+        author
+        quote
+      }
+    }
+  }
 }
 `
+
+/*
+
+
+            ...GatsbyImageSharpFluid_withWebp
+
+            */

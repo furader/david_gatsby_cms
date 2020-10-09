@@ -4,44 +4,112 @@ import './all_css/style.css'
 import './all_css/css/custom.css'
 import './all_css/css/resume.css'
 import './all_css/css/resume_fonts.css'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile, isTablet
+} from "react-device-detect";
 import im from '../../static/img/coffee.png'
+
 import './all_css/css/bootstrap.css'
 
 
-export const Section2Template = ({ idd1, idd2, classes, content, title, colour, imageData }) => {
+export const Section2Template = (data) => {
 
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 900, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
 
+  return <section id={`content`} className="bg-dr">
 
-  return <section id={`content`} className="nobg"  >
-    <div className="content-wrap nobottompadding nobg">
-      <div id={`section-skills`} className="section nomargin page-section dark nobg clearfix" style={{ paddingBottom: "50px" }} >
-        <div className="container clearfix">
+    <div id={`section-testimonials`} className="content-wrap bg-dr" style={{ display: "block" }}>
+      <h3 className="center dr-heading myCaroTitle">{data.title}</h3>
+      <Carousel responsive={responsive}
+      showDots={true}
+      responsive={responsive}
+      ssr={true} // means to render carousel on server-side.
+      infinite={true}
+      autoPlay={true}
+      autoPlaySpeed={3000}
+      keyBoardControl={true}
+      customTransition="all .5"
+      transitionDuration={100}
+      containerClass="carousel-container"
+      removeArrowOnDeviceType={["tablet", "mobile"]}
+      deviceType={isMobile === true ? "mobile": isTablet === true? "tablet": "desktop"}
+      dotListClass="custom-dot-list-style"
+      itemClass="carousel-item-padding-40-px"
+      >
+        {
+          data.testimonials.map(da => {
 
-          <div className="row clearfix">
-            <div className="col-md-5 clearfix">
-              <div>
-                <h2 className="font-primary ls5" data-animate="fadeIn" style={{ color: "#303030", fontSize: "2.5rem", fontWeight: "700" }}
-                >KEYNOTE TALKS  EVENT MODERATION</h2>
-                <p data-animate="fadeIn" data-delay="400" style={{ color: "#404040", fontSize: "0.875rem", fontWeight: "500" }}> David Rowan is in international demand as a keynote speaker, event host and moderator, after-dinner speaker and webinar presenter. He travels frequently, and has a home studio at his London base for online presentations and moderating. His current keynote topics include:</p>
-                <a data-animate="fadeIn" data-delay="400" className="team" data-toggle="modal" data-target=".bs-example-modal-lg2">
-                  <button className="bottommargin button button-large button-border button-white button-dark noleftmargin">See all speaking topics here</button></a>
+            return <div className="testimonial bg-dr-2 gradient" style={{ margin: " 0 30px -50px 30px" }}  >
+              <div className="testi-content" >
+                <p> {da.quote} </p>
+                <div className="testi-meta">
+                      {da.author}
+                    </div>
               </div>
-              <div data-animate="fadeIn" data-delay="800">
-                <p style={{ marginRight: "40px", color: "#303030", fontSize: "0875", fontWeight: "500" }}>
-                  <strong>EVENT MODERATING: </strong>David has moderated events for the UK and French governments; World Economic Forum; Royal Academy of Engineering; Pictet</p>
-                <a href="mailto:web@davidrowan.com" className="button button-large button-border button-white button-dark noleftmargin"> Book David for your event</a>
-              </div>
+
             </div>
-          </div>
-        </div>
 
-      </div>
+          })
+
+        }
+      </Carousel>
     </div>
   </section>
+
 }
 
 
+/*
+<div style={{ margin: " 0 30px -50px 30px" }} >
+        <div className="owl-carousel testimonials-carousel carousel-widget myCaro"
 
+          data-margin="20" data-items-sm="1" data-items-md="2" data-items-xl="3">
+          {
+            data.testimonials.map(da => {
+              return <div className="oc-item">
+                <div className="testimonial bg-dr-2 gradient">
+                  <div className="testi-content">
+                    <p>{da.quote}</p>
+                    <div className="testi-meta">
+                      {da.author}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            })
+
+
+          }
+        </div>
+      </div>
+
+*/
 
 const Section2Page = ({ data }) => {
   const { markdownRemark } = data;
@@ -60,27 +128,17 @@ export default Section2Page
 
 export const pageQuery = graphql`
 query {
-      markdownRemark(frontmatter: {identifier: {eq: "section1"}}) {
-
-      frontmatter {
+  markdownRemark(frontmatter: {identifier: {eq: "section2"}}) {
+    frontmatter {
       title
-            category
-            classes
-            description
-            colour
-          }
-          internal {
-      content
+      templateKey
+      identifier
+      testimonials {
+        author
+        quote
+      }
     }
-        }
-        image: file(relativePath: {eq: "DR1_edit.jpg" }) {
-      childImageSharp {
-      fluid(quality: 90, maxWidth: 1920) {
-      ...GatsbyImageSharpFluid_withWebp
-    }
-          }
-        }
-      
+  }
 }
 
 `

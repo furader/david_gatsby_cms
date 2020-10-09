@@ -11,6 +11,32 @@
     padding-right: 0px !important;
 	}
 }
+.react-multi-carousel-list {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 40vh;
+}
+.react-multi-carousel-list {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+
+}
+.myCaro{
+  font-weight: 300!important; 
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+.myCaroTitle.dr-heading {
+
+  color: #C9C5C2!important;
+}
 .theBlurredOne{
   position: fixed; width: 100%; top: 0; left: 0; 
   background: #fff url('../../../img/DR1_edit.png') no-repeat top center; 
