@@ -132,9 +132,6 @@ image: file(relativePath: { eq: "DR1_edit.jpg" }) {
 
 const Section1Page = (a) => {
 const {data} = a;
-  console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-console.log(data);
-  console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
   const { markdownRemark } = data;
 
 

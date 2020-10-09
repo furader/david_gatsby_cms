@@ -111,17 +111,15 @@ export const Section2Template = (data) => {
 
 */
 
-const Section2Page = ({ data }) => {
+const Section2Page = (a) => {
+  const {data} = a;
   const { markdownRemark } = data;
 
-  var allFront = markdownRemark.frontmatter;
-  var colour = allFront.colour;
-  var cont = markdownRemark.internal.content;
-  var speClass = allFront.classes;
 
 
 
-  return <Section2Template classes={speClass} content={cont} title={allFront.title} colour={colour} />;
+
+  return <Section2Template {...data.markdownRemark.frontmatter} />;
 
 }
 export default Section2Page
