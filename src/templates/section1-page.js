@@ -36,7 +36,7 @@ const imageData = data.background_image.childImageSharp.fluid;
               >
                 {props =>(
                   <div key="89" style={props}>
-                    <p key="81"  className="t300 ls1 d-none d-sm-block" data-animate="fadeIn" data-delay="400"
+                    <p key="81"  className="t300 ls1  d-sm-block" data-animate="fadeIn" data-delay="400"
                       style={{ color: "#303030" }}>{data.subtitle}</p>
                   </div>
                  ) }
@@ -47,7 +47,7 @@ const imageData = data.background_image.childImageSharp.fluid;
               >
                 {props =>(
                   <div key="82" style={props}>
-              <a key="85" className="font-primary noborder ls1 topmargin-sm inline-block more-link text-white dark d-none d-sm-inline-block"
+              <a key="85" className="font-primary noborder ls1 topmargin-sm inline-block more-link text-white dark  d-sm-inline-block"
                 data-animate="fadeIn" data-delay="800" data-scrollto="#section-works" data-offset="0">
                 <ul key="92" style={{ marginLeft: "25px", fontSize: "1.1rem", color: "#333" }}>
                  {data.achievements.map(element => {

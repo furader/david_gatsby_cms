@@ -83,33 +83,7 @@ export const Section2Template = (data) => {
 }
 
 
-/*
-<div style={{ margin: " 0 30px -50px 30px" }} >
-        <div className="owl-carousel testimonials-carousel carousel-widget myCaro"
 
-          data-margin="20" data-items-sm="1" data-items-md="2" data-items-xl="3">
-          {
-            data.testimonials.map(da => {
-              return <div className="oc-item">
-                <div className="testimonial bg-dr-2 gradient">
-                  <div className="testi-content">
-                    <p>{da.quote}</p>
-                    <div className="testi-meta">
-                      {da.author}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-            })
-
-
-          }
-        </div>
-      </div>
-
-*/
 
 const Section2Page = (a) => {
   const {data} = a;
