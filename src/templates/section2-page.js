@@ -109,7 +109,7 @@ export const Section2Template = (data) => {
               <img src="img/video-grid-5.png" alt="Non Bullshit Innovation" />
             </a>
             <div className="portfolio-overlay">
-              <a href="https://www.youtube.com/watch?v=kklyo_6sHVc&t=7s" className="left-icon" data-lightbox="iframe"><i className="icon-line-play"></i></a>
+              <a href="https://youtu.be/EXrc0W4CXSk" className="left-icon" data-lightbox="iframe"><i className="icon-line-play"></i></a>
               <a href="portfolio-single-video.html" className="right-icon"><i className="icon-line-ellipsis"></i></a>
             </div>
           </div>
