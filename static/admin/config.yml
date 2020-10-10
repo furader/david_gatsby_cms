@@ -40,3 +40,10 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Identifier, name: identifier, widget: "hidden"}
           - {label: Testimonials, name: testimonials, widget: list,fields: [{label: Author, name: author, widget: string},{label: Quote, name: quote, widget: string}]}
+      - file: "src/pages/section3/index.md"
+        label: "Section3 Page"
+        name: "section3"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Identifier, name: identifier, widget: "hidden"}    

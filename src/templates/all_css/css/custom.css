@@ -11,6 +11,10 @@
     padding-right: 0px !important;
 	}
 }
+.videoContainer{
+  margin: 0px 0px 0px 0px !important; 
+  padding: 0px 0px 0px 0px !important;
+}
 .react-multi-carousel-list {
   display: flex;
   align-items: center;

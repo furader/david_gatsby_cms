@@ -12,8 +12,14 @@ import './../../templates/all_css/css/bootstrap.css'
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile, isTablet
+} from "react-device-detect";
 
-const Section1Preview = ({ entry, getAsset }) => {
+const Section2Preview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS();
 
 
@@ -88,4 +94,4 @@ const Section1Preview = ({ entry, getAsset }) => {
 
 
 
-export default Section1Preview
+export default Section2Preview

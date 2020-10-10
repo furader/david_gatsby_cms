@@ -1,7 +1,7 @@
 ---
 title: Testimonials
-templateKey: section2-page
-identifier: section2
+templateKey: section3-page
+identifier: section3
 testimonials:
   - author: Accenture
     quote: >-

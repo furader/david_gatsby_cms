@@ -32,6 +32,43 @@ export default function HTML(props) {
  <script src="./all_css/js/jquery.js" />
 	<script src="./all_css/js/plugins.js" />
 	<script src="./all_css/js/functions.js" />
+  <script
+  dangerouslySetInnerHTML={{
+    __html: `
+    
+$(document).ready(function() {
+  console.log("showing");
+  var $videoSrc;  
+  $('.video-btn').click(function() {
+      $videoSrc = $(this).data( "src" );
+  });
+  console.log($videoSrc);
+  
+    
+    
+  // when the modal is opened autoplay it  
+  $('#myModal').on('shown.bs.modal', function (e) {
+      
+  // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+  $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+  })
+    
+  
+  
+  // stop playing the youtube video when I close the modal
+  $('#myModal').on('hide.bs.modal', function (e) {
+      // a poor man's stop video
+      $("#video").attr('src',$videoSrc); 
+  }) 
+      
+      
+  
+  
+  
+});
+        `,
+  }}
+/>
 <script
   dangerouslySetInnerHTML={{
     __html: `
@@ -55,25 +92,22 @@ export default function HTML(props) {
 				elementHeight = element.outerHeight(),
         elementNextHeight = jQuery('.content-wrap').find('.page-section').first().outerHeight();
         
-        console.log("my element");
-        console.log(element);
-        console.log(elementHeight);
-        console.log(elementNextHeight);
         
 			if( ( elementHeight + elementNextHeight + 50 ) > pixs ) {
 				element.addClass('blurred-image-visible');
         element.css({ 'opacity': opacity });
-        
-        console.log("it's viiiiiiiiiisible");
 			} else {
         element.removeClass('blurred-image-visible');
-        console.log("it's no");
 			}
 		});
         `,
   }}
 />
-        {props.headComponents}
+<script
+dangerouslySetInnerHTML={{
+    __html: `
+  (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() `}}/>     
+  {props.headComponents}
       </head>
       <body  className="stretched sticky-responsive-menu" {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -83,6 +117,35 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <div className="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div className="modal-dialog modal-lg">
+		<div className="modal-body">
+			<div className="modal-content">
+				<div className="modal-header">
+					<h4 className="modal-title tsa-pink" id="vladimir-danila-modal">David Rowan's Speaking Topics</h4>
+					<button type="button" className="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div className="modal-body">
+					<p>
+						<ul style={{padding:"padding: 0 0 0 40px"}}>
+							<li>FINDING OPPORTUNITY AMID THE CRISIS: Technology offers hope for optimism as we emerge from this crisis</li>
+							<li>BUSINESS INNOVATION HAS NEVER MATTERED MORE</li>
+							<li>TEN LESSONS FROM THE NON-BULLSHIT INNOVATORS</li>
+							<li>WHAT TECHNOLOGY MEANS FOR THE FUTURE OF YOUR INDUSTRY</li>
+							<li>THE FUTURE OF THE WORKPLACE</li>
+							<li>WHY IT’S TIME TO CHALLENGE THE TECH MONOPOLIES  </li>
+							<li>THE TEN NEW RULES OF BUSINESS</li>
+							<li>HOW TO OPTIMISE CUSTOMER ENGAGEMENT</li>
+							<li>WHY PURPOSE PLUS PROFIT IS THE NEW BUSINESS MANTRA </li>
+						</ul>
+					</p>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
       </body>
     </html>
   )

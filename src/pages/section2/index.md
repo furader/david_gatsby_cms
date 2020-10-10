@@ -11,7 +11,7 @@ testimonials:
         Your insights and perspective into the companies and entrepreneurs who are changing the world created a buzz around those assembled.
   - author: Terrapinn
     quote: >-
-        >We had nothing but praise for his forward thinking piece, it was both informative and entertaining. I didn’t see a single attendee checking their smartphone during David’s talk, which is a testament to his skill as a speaker. I will definitely recommend him to our other offices around the world.
+        We had nothing but praise for his forward thinking piece, it was both informative and entertaining. I didn’t see a single attendee checking their smartphone during David’s talk, which is a testament to his skill as a speaker. I will definitely recommend him to our other offices around the world.
   - author: Mercer
     quote: >-
         He enthralled the audience… He is great to work with, has a fantastic presentation and was an asset to the panel session. The feedback from clients and Mercer folk has been excellent.
