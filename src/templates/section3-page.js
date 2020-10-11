@@ -17,41 +17,32 @@ import {
 import './all_css/css/bootstrap.css'
 
 
-export const Section3Template = (data) => {
+export class Section3Template extends React.Component {
 
-  return <div id={`section-videos`} className="content-wrap bg-dr bottommargin bottompadding">
-            <div className="portfolio portfolio-5 portfolio-full portfolio-notitle clearfix videoContainer" >
+  constructor(data){
+    super(data);
+this.state = {
+  counter: 1
+};
+this.doClick = this.doClick.bind(this);
+  }
 
-                <article className="portfolio-item pf-graphics pf-uielements" data-animate="fadeIn">
-                  <div className="portfolio-image">
-                    <a href="#">
-                      <img src="img/video-grid-1.png" alt="Non Bullshit Innovation" />
-                    </a>
-                    
-                  </div>
-                  <div className="portfolio-desc">
-                      <h3><a href="portfolio-single-video.html">Business Opportunities from Tech</a></h3>
-                      <span><a href="#"></a><a href="#">Mercer Global Investment Forum</a></span>
-                  </div>
-                </article>
+  doClick = ()=>{
+      console.log("button clicked");
+      this.setState({
+        counter: this.state.counter + 1
+      });
+      this.forceUpdate();
+  }
 
-                <article className="portfolio-item pf-graphics pf-uielements" data-animate="fadeIn" data-delay="150">
-                  <div className="portfolio-image">
-                    <a href="#">
-                      <img src="img/video-grid-5.png" alt="Non Bullshit Innovation" />
-                    </a>
-                      <div className="portfolio-overlay">
-                        <a href="https://www.youtube.com/watch?v=kklyo_6sHVc&t=7s" className="left-icon" data-lightbox="iframe"><i className="icon-line-play"></i></a>
-                        <a href="portfolio-single-video.html" className="right-icon"><i className="icon-line-ellipsis"></i></a>
-                      </div>
-              </div>
-                    <div className="portfolio-desc">
-                      <h3><a href="portfolio-single-video.html">On Non-Bullshit Innovation</a></h3>
-                      <span><a href="#"></a> <a href="#">PropTech, 2018</a></span>
-                    </div>
-                </article>
-    </div>
-    </div>
+  render(){
+
+    return ( <section className="container nobg" style={{position:"absolute"}}>
+      <button id={`btnId`} onClick={this.doClick}>kkk</button>
+    <div>{this.state.counter}kkkkkkkkkkkkkkllllllllllllllllllllllll</div>
+    </section>
+    );
+  }
 }
 
 

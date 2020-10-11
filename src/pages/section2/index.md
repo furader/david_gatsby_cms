@@ -2,6 +2,22 @@
 title: Testimonials
 templateKey: section2-page
 identifier: section2
+videos: 
+  - source: >-
+        https://www.youtube.com/embed/EXrc0W4CXSk
+    thumbnail: /img/video-grid-1.png
+    video_title: Business Opportunities from Tech
+    location: Mercer Global Investment Forum 
+  - source: >-
+        https://www.youtube.com/embed/kklyo_6sHVc
+    thumbnail: /img/video-grid-5.png
+    video_title: On Non-Bullshit Innovation
+    location: PropTech, 2018
+  - source: >-
+        https://www.youtube.com/embed/4W44RoUciyk
+    thumbnail: /img/video-grid-4.png
+    video_title: On Non-Bullshit Innovation
+    location: USI Paris, Jun 2019
 testimonials:
   - author: Accenture
     quote: >-

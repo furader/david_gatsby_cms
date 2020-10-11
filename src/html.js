@@ -32,57 +32,12 @@ export default function HTML(props) {
  <script src="./all_css/js/jquery.js" />
 	<script src="./all_css/js/plugins.js" />
 	<script src="./all_css/js/functions.js" />
-  <script
-  dangerouslySetInnerHTML={{
-    __html: `
-    
-$(document).ready(function() {
-  console.log("showing");
-  var $videoSrc;  
-  $('.video-btn').click(function() {
-      $videoSrc = $(this).data( "src" );
-  });
-  console.log($videoSrc);
-  
-    
-    
-  // when the modal is opened autoplay it  
-  $('#myModal').on('shown.bs.modal', function (e) {
-      
-  // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-  $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
-  })
-    
-  
-  
-  // stop playing the youtube video when I close the modal
-  $('#myModal').on('hide.bs.modal', function (e) {
-      // a poor man's stop video
-      $("#video").attr('src',$videoSrc); 
-  }) 
-      
-      
-  
-  
-  
-});
-        `,
-  }}
-/>
+
 <script
   dangerouslySetInnerHTML={{
     __html: `
-            var name = 'world';
-            console.log('Hello ' + name);
-
-
-            window.onload = ()=>{
-              console.log("loadded");
-          }
-          
-  window.onload = ()=>{
-    console.log("loaddedkkkkk");
-}
+           
+        
     jQuery(window).scroll(function() {
 
       console.log("scroooling");
@@ -117,7 +72,7 @@ dangerouslySetInnerHTML={{
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <div className="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div className="modal fade bs-example-modal-lg2"  role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 	<div className="modal-dialog modal-lg">
 		<div className="modal-body">
 			<div className="modal-content">

@@ -33,6 +33,7 @@ const IndexPage = (a) => {
       {...section1.frontmatter}
     />
     <Section2Template {...section2.frontmatter} />
+    
   </>
 
 
@@ -78,6 +79,18 @@ query {
       testimonials {
         author
         quote
+      }
+      videos {
+        location
+        source
+        thumbnail{
+          childImageSharp {
+            fluid (maxWidth: 3000,quality: 100){
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+        video_title
       }
     }
   }
