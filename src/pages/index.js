@@ -79,7 +79,7 @@ query {
       testimonials {
         author
         quote
-      }
+      } 
       videos {
         location
         source

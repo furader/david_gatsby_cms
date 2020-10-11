@@ -65,6 +65,7 @@ export class Section2Template extends React.Component {
     this.forceUpdate();
   }
   render() {
+    console.log(this.state)
     const id = `videoModalId`;
 const pas = this.openModal;
     return <section id={`content`} className="bg-dr">
@@ -192,6 +193,18 @@ query {
       testimonials {
         author
         quote
+      } 
+      videos {
+        location
+        source
+        thumbnail{
+          childImageSharp {
+            fluid (maxWidth: 3000,quality: 100){
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+        video_title
       }
     }
   }
