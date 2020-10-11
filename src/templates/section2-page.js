@@ -78,10 +78,10 @@ const pas = this.openModal;
           ssr={true} // means to render carousel on server-side.
           infinite={true}
           autoPlay={true}
-          autoPlaySpeed={3000}
+          autoPlaySpeed={2000}
           keyBoardControl={true}
-          customTransition="all .5"
-          transitionDuration={100}
+         // customTransition="all 150"
+          transitionDuration={700}
           containerclassName="carousel-container"
           removeArrowOnDeviceType={["tablet", "mobile"]}
           deviceType={isMobile === true ? "mobile" : isTablet === true ? "tablet" : "desktop"}
