@@ -13,7 +13,8 @@ import './../../templates/all_css/css/bootstrap.css'
 const Section1Preview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS();
 
-
+  console.log("new data section1Preview");
+  console.log(data);
 
 
   if (data) {

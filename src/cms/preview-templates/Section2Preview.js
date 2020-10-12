@@ -50,7 +50,8 @@ import './../../templates/all_css/css/bootstrap.css'
         const { entry, getAsset } = a;
          const data = entry.getIn(['data']).toJS();
          data.forPreview = true;
-       
+         console.log("new data section2Preview");
+         console.log(data);
        
       this.state = {
         source: "",
