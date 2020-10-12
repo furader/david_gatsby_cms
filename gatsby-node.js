@@ -51,7 +51,7 @@ exports.createPages = ({ actions, graphql }) => {
       if(edge.node.frontmatter && edge.node.frontmatter.identifier == "section2"){
           
   console.log("################################################################")
-  console.log(edge.node.frontmatter.background_image);
+  console.log(edge.node.frontmatter);
     console.log("################################################################")
       }
     

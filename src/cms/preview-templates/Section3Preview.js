@@ -23,18 +23,31 @@ import './../../templates/all_css/css/bootstrap.css'
   
   
   
-  export default class Section3Preview extends React.Component {
+ // export default class Section3Preview extends React.Component {
   
-    constructor(a) { 
-      const { entry, getAsset } = a;
-         const data = entry.getIn(['data']).toJS();
-         this.state = data;
-    }
+    // constructor(a) { 
+    //   const { entry, getAsset } = a;
+    //      const data = entry.getIn(['data']).toJS();
+    //      this.state = {
+    //        data: data
+    //       };
+    // }
     
-    render(){
+  //   render(){
       
 
-      return  <Section3Template {...this.state} />
-    }
-  }
+  //     return  <Section3Template {...this.state.data} />
+  //   }
+  // }
   
+const  Section3Preview =  (a) =>{
+    const { entry, getAsset } = a;
+          const data = entry.getIn(['data']).toJS(); 
+
+
+    return(
+        <Section3Template {...data} />
+
+    )
+  }
+  export default Section3Preview

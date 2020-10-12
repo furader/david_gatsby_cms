@@ -59,4 +59,3 @@ videos:
     video_title: On Non-Bullshit Innovation
     location: Slovakia Tech Forum, Nov 2019
 ---
-an set a format on the date field in your config.yml. If you set a format, the date will be saved as a string in the markdown, instead of a MD date.
