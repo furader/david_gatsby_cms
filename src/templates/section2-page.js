@@ -42,6 +42,7 @@ export class Section2Template extends React.Component {
         items: 1
       }
     };
+
     this.state = {
       source: "",
       ext: "?autoplay=1&amp;modestbranding=1&amp;showinfo=0",
@@ -68,6 +69,7 @@ export class Section2Template extends React.Component {
     console.log(this.state)
     const id = `videoModalId`;
 const pas = this.openModal;
+const forPreview = this.state.dataAll.forPreview === true ? true: false;
     return <section id={`content`} className="bg-dr">
 
       <div id={`section-testimonials`} className="content-wrap bg-dr" style={{ display: "block" }}>
@@ -109,13 +111,14 @@ const pas = this.openModal;
       <div id={`section-videos`} className="content-wrap bg-dr bottommargin bottompadding">
       <div className="portfolio portfolio-5 portfolio-full portfolio-notitle clearfix videoContainer" >
           
-{
-this.state.dataAll.videos.map(function(vid, i){
-vid.id = id + i;
-vid.openMe = pas;
-return <VideoModal {...vid}/> 
-})
-  }
+            {
+            this.state.dataAll.videos.map(function(vid, i){
+            vid.id = id + i;
+            vid.openMe = pas;
+            vid.forPreview = forPreview;
+            return <VideoModal {...vid}/> 
+            })
+              }
 
   
   <div className="modal fade" id={`videoModal`} role="dialog">

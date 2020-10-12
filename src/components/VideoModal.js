@@ -8,6 +8,7 @@ export class VideoModal extends React.Component {
   constructor(data) {
     super(data);
     this.state = {
+      forPreview: data.forPreview,
       source: data.source + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0",
       ext: "?autoplay=1&amp;modestbranding=1&amp;showinfo=0",
       isClosed: true,
@@ -28,12 +29,14 @@ export class VideoModal extends React.Component {
   }
 
   render() {
-    const imageData = this.state.thumbnail.childImageSharp.fluid;
+    const tit = this.state.video_title;
+    const forPreview = this.state.forPreview;
+    const imageData = !forPreview ? this.state.thumbnail.childImageSharp.fluid : this.state.thumbnail;
+    const holder = !forPreview ?  <Img fluid={imageData} /> : <img src={imageData} alt={tit}></img>;
     return       <article className="portfolio-item pf-graphics pf-uielements" data-animate="fadeIn">
         <div className="portfolio-image">
           <a href="#">
-
-            <Img fluid={imageData} />
+              { holder              }
           </a>
           <div className="portfolio-overlay">
             <a href="#" className="left-icon" data-toggle="modal"

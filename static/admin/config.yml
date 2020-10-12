@@ -20,7 +20,7 @@ collections:
         label: "Section1 Page"
         name: "section1"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}          
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "section1-page"}          
           - {label: Background_image, name: background_image, widget: image}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -36,7 +36,7 @@ collections:
         label: "Section2 Page"
         name: "section2"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "section2-page"}
           - {label: Title, name: title, widget: string}
           - {label: Identifier, name: identifier, widget: "hidden"}
           - {label: Testimonials, name: testimonials, widget: list,fields: [{label: Author, name: author, widget: string},{label: Quote, name: quote, widget: string}]}

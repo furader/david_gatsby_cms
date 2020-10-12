@@ -70,7 +70,7 @@ const Section1Preview = ({ entry, getAsset }) => {
                     <p style={{ marginRight: "40px", color: "#303030", fontSize: "0875", fontWeight: "500" }}>
                       <strong>{data.strong_text}</strong>
                       {data.description2}</p>
-                    <a href="mailto:web@davidrowan.com" className="button button-large button-border button-white button-dark noleftmargin"> Book David for your event</a>
+                    <a href="mailto:web@davidrowan.com" className="button button-large button-border button-white button-dark noleftmargin"> {data.booking}</a>
                   </div>
                 </div>
               </div>

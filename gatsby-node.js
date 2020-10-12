@@ -48,27 +48,13 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
       const t = edge.node.frontmatter.title;
 
-      if(edge.node.frontmatter && edge.node.frontmatter.identifier == "section1"){
+      if(edge.node.frontmatter && edge.node.frontmatter.identifier == "section2"){
           
   console.log("################################################################")
   console.log(edge.node.frontmatter.background_image);
     console.log("################################################################")
-
-    const tg = edge.node.frontmatter.background_image;
-    createPage({
-        
-      path: edge.node.fields.slug,
-      tags: edge.node.frontmatter.tags,
-      component: path.resolve(
-        `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-      ),
-      // additional data can be passed via context
-      context: {
-        id, 
-        mainImageData: tg
-      },
-    })
-      }else{
+      }
+    
       createPage({
         
         path: edge.node.fields.slug,
@@ -81,7 +67,7 @@ exports.createPages = ({ actions, graphql }) => {
           id,
         },
       })
-      }
+      
     })
 
   
@@ -92,16 +78,11 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   fmImagesToRelative(node) // convert image paths for gatsby images
-if(node.frontmatter && node.frontmatter.identifier == "section1"){
+if(node.frontmatter && node.frontmatter.identifier == "section2"){
   console.log("(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((");
 console.log(node);
   console.log("(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((");
-  const vv = node.frontmatter.background_image;
-  createNodeField({
-    name: `mainImageData`,
-    node,
-    vv
-  })
+  
 }
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
