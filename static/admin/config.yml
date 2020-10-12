@@ -32,6 +32,7 @@ collections:
           - {label: All Speaking topics link, name: speaking_topics_link, widget: string}
           - {label: Strong text, name: strong_text, widget: string}
           - {label: Description2, name: description2, widget: string}
+
       - file: "src/pages/section2/index.md"
         label: "Section2 Page"
         name: "section2"
@@ -41,6 +42,7 @@ collections:
           - {label: Identifier, name: identifier, widget: "hidden"}
           - {label: Testimonials, name: testimonials, widget: list,fields: [{label: Author, name: author, widget: string},{label: Quote, name: quote, widget: string}]}
           - {label: Youtube Videos, name: videos, widget: list,fields: [{label: Thumbnail, name: thumbnail, widget: image},{label: Source, name: source, widget: string},{label: Video Title, name: video_title, widget: string},{label: Location, name: location, widget: string}]}
+      
       - file: "src/pages/section3/index.md" 
         label: "Section3 Page"
         name: "section3"

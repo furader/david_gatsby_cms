@@ -18,5 +18,5 @@ console.log("it;s htttt");
   }
 CMS.registerPreviewTemplate('section1', Section1Preview)
 CMS.registerPreviewTemplate('section2', Section2Preview)
-//CMS.registerPreviewTemplate('section3', Section3Preview)
+CMS.registerPreviewTemplate('section3', Section3Preview)
    

@@ -148,31 +148,6 @@ const forPreview = this.state.dataAll.forPreview === true ? true: false;
 }
 
 
-/*
-<MyVideos {...this.state.dataAll.videos} />
-<button id={`mainBtnId`}
-           type="button" class="btn btn-primary video-btn"
-            data-toggle="modal"
-            data-backdrop="static" data-keyboard="false"
-            onClick={this.modalClosingick}
-            data-target="#videoModal">
-            Play Video 1 - autoplay
-      </button>
-          
- <div className="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-body">
-                <button type="button" className="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <div>
-                  <iframe width="100%" height="350" src=""></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        */
-
 const Section2Page = (a) => {
   const { data } = a;
   const { markdownRemark } = data;
