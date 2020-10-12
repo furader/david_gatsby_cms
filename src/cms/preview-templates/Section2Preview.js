@@ -60,7 +60,7 @@ import './../../templates/all_css/css/bootstrap.css'
         dataAll: data,
         responsive: responsive
       }
-      
+      this.forceUpdate();
     }
     closeModal = () =>{
       console.log("close modal");

@@ -43,7 +43,7 @@ import './../../templates/all_css/css/bootstrap.css'
 const  Section3Preview =  (a) =>{
     const { entry, getAsset } = a;
           const data = entry.getIn(['data']).toJS(); 
-
+          this.forceUpdate();
 
     return(
         <Section3Template {...data} />
