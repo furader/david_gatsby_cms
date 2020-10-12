@@ -22,7 +22,11 @@ export class Section3Template extends React.Component {
   constructor(a){
     super(a);
 this.state = a;
-  }
+console.log("from section 3:");
+console.log(a.title);
+this.forceUpdate();  
+}
+  
 
   doClick = ()=>{
       console.log("button clicked");

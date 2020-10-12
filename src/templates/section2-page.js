@@ -91,9 +91,9 @@ const forPreview = this.state.dataAll.forPreview === true ? true: false;
           itemclassName="carousel-item-padding-40-px"
         >
           {
-            this.state.dataAll.testimonials.map(da => {
-
-              return <div className="testimonial bg-dr-2 gradient" style={{ margin: " 0 30px -50px 30px" }}  >
+            this.state.dataAll.testimonials.map((da,i) => {
+              da.id = id + i;
+              return <div key={id} className="testimonial bg-dr-2 gradient" style={{ margin: " 0 30px -50px 30px" }}  >
                 <div className="testi-content" >
                   <p> {da.quote.trim()} </p>
                   <div className="testi-meta">

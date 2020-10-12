@@ -19,6 +19,7 @@ exports.createPages = ({ actions, graphql }) => {
               identifier
               templateKey
               title
+              category
               background_image {
                 childImageSharp {
                   fluid (maxWidth: 3000,quality: 100){
@@ -48,7 +49,7 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
       const t = edge.node.frontmatter.title;
 
-      if(edge.node.frontmatter && edge.node.frontmatter.identifier == "section2"){
+      if(edge.node.frontmatter && edge.node.frontmatter.identifier && edge.node.frontmatter.identifier.indexOf("sect") >= 0){
           
   console.log("################################################################")
   console.log(edge.node.frontmatter);
@@ -78,7 +79,7 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   fmImagesToRelative(node) // convert image paths for gatsby images
-if(node.frontmatter && node.frontmatter.identifier == "section2"){
+if(node.frontmatter && node.frontmatter.identifier && node.frontmatter.identifier.indexOf("sect") >= 0){
   console.log("(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((");
 console.log(node);
   console.log("(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((");

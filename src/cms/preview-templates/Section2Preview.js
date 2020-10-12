@@ -101,9 +101,9 @@ import './../../templates/all_css/css/bootstrap.css'
             itemclassName="carousel-item-padding-40-px"
           >
             {
-              this.state.dataAll.testimonials.map(da => {
+              this.state.dataAll.testimonials.map((da,i) => {
   
-                return <div className="testimonial bg-dr-2 gradient" style={{ margin: " 0 30px -50px 30px" }}  >
+                return <div key={i} className="testimonial bg-dr-2 gradient" style={{ margin: " 0 30px -50px 30px" }}  >
                   <div className="testi-content" >
                     <p> {da.quote.trim()} </p>
                     <div className="testi-meta">

@@ -2,6 +2,7 @@
 templateKey: section2-page
 title: Testimonials
 identifier: section2
+category: sections
 testimonials:
   - author: Accenture
     quote: David was incredible and we’ve had some great feedback already from our

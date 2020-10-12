@@ -23,31 +23,48 @@ import './../../templates/all_css/css/bootstrap.css'
   
   
   
- // export default class Section3Preview extends React.Component {
+   class Section3Preview extends React.Component {
   
-    // constructor(a) { 
-    //   const { entry, getAsset } = a;
-    //      const data = entry.getIn(['data']).toJS();
-    //      this.state = {
-    //        data: data
-    //       };
-    // }
-    
-  //   render(){
-      
-
-  //     return  <Section3Template {...this.state.data} />
-  //   }
-  // }
-  
-const  Section3Preview =  (a) =>{
-    const { entry, getAsset } = a;
-          const data = entry.getIn(['data']).toJS(); 
+     constructor(a) { 
+       super(a);
+       const { entry, getAsset } = a;
+          const data = entry.getIn(['data']).toJS();
+          this.state = data;
+          console.log("preview 3 is updating");
+          console.log(data.title);
           this.forceUpdate();
+     }
+    
+     render = ()=>{
+      
+      return (
+        <section className="content-wrap bg-info  "  >
+     <div className="row" style={{margin:0,padding:0, display:"flex",height:"10vh", justifyContent:"center"}}>
+     <h1>  {this.state.title}</h1>
+     </div>
+     <div className="row ">
+       <div className="col bg-success" style={{alignItems:"center",borderRadius:"100px",margin:0,padding:0, display:"flex",height:"20vh", justifyContent:"center"}}>
+       {this.state.description}
+       </div>
+       <div className="col bg-success" style={{alignItems:"center",borderRadius:"100px",margin:0,padding:0, display:"flex",height:"20vh", justifyContent:"center"}}>
+       {this.state.description1}
+       </div>
+     </div>
+    
+    </section>
+      )
 
-    return(
-        <Section3Template {...data} />
+     }
+   }
+  
+// const  Section3Preview =  (a) =>{
+//     const { entry, getAsset } = a;
+//           const data = entry.getIn(['data']).toJS(); 
+          
 
-    )
-  }
+//     return(
+//         <Section3Template {...data} />
+
+//     )
+//   }
   export default Section3Preview
