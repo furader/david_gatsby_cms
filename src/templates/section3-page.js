@@ -19,12 +19,9 @@ import './all_css/css/bootstrap.css'
 
 export class Section3Template extends React.Component {
 
-  constructor(data){
-    super(data);
-this.state = {
-  counter: 1
-};
-this.doClick = this.doClick.bind(this);
+  constructor(a){
+    super(a);
+this.state = a;
   }
 
   doClick = ()=>{
@@ -37,9 +34,19 @@ this.doClick = this.doClick.bind(this);
 
   render(){
 
-    return ( <section className="container nobg" style={{position:"absolute"}}>
-      <button id={`btnId`} onClick={this.doClick}>kkk</button>
-    <div>{this.state.counter}kkkkkkkkkkkkkkllllllllllllllllllllllll</div>
+    return ( <section className="content-wrap bg-info  "  >
+     <div className="row" style={{margin:0,padding:0, display:"flex",height:"10vh", justifyContent:"center"}}>
+     <h1>  {this.state.title}</h1>
+     </div>
+     <div className="row ">
+       <div className="col bg-success" style={{alignItems:"center",borderRadius:"100px",margin:0,padding:0, display:"flex",height:"20vh", justifyContent:"center"}}>
+       {this.state.description}
+       </div>
+       <div className="col bg-success" style={{alignItems:"center",borderRadius:"100px",margin:0,padding:0, display:"flex",height:"20vh", justifyContent:"center"}}>
+       {this.state.description1}
+       </div>
+     </div>
+    
     </section>
     );
   }
@@ -63,15 +70,13 @@ export default Section3Page
 
 export const pageQuery = graphql`
 query {
-          markdownRemark(frontmatter: {identifier: {eq: "section3"}}) {
-          frontmatter {
-          title
+  markdownRemark(frontmatter: {identifier: {eq: "section3"}}) {
+    frontmatter {
+      title
       templateKey
       identifier
-      testimonials {
-          author
-        quote
-      }
+      description
+      description1
     }
   }
 }

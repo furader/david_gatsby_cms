@@ -45,6 +45,8 @@ collections:
         label: "Section3 Page"
         name: "section3"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "section3-page"}
           - {label: Title, name: title, widget: string}
           - {label: Identifier, name: identifier, widget: "hidden"}    
+          - {label: Description, name: description, widget: "string"}    
+          - {label: Description 1, name: description1, widget: "string"}    

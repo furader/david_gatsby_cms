@@ -27,12 +27,14 @@ const IndexPage = (a) => {
   const { data } = a;
   const section1 = data.section1;
   const section2 = data.section2;
+  const section3 = data.section3;
 
   return <>
     <Section1Template
       {...section1.frontmatter}
     />
     <Section2Template {...section2.frontmatter} />
+    <Section3Template {...section3.frontmatter} />
     
   </>
 
@@ -92,6 +94,15 @@ query {
         }
         video_title
       }
+    }
+  }
+  section3:  markdownRemark(frontmatter: {identifier: {eq: "section3"}}) {
+    frontmatter {
+      title
+      templateKey
+      identifier
+      description
+      description1
     }
   }
 }
