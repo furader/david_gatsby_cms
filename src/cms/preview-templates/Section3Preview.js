@@ -6,6 +6,31 @@ import './../../templates/all_css/style.css'
 import './../../templates/all_css/css/custom.css'
 import './../../templates/all_css/css/resume.css'
 import './../../templates/all_css/css/resume_fonts.css'
+import './../../templates/all_css/css/font-icons.css'
+
+import './../../templates/all_css/css/dark.css'
+import './../../templates/all_css/css/interior_fonts.css'
+import './../../templates/all_css/css/interior-design.css'
+
+// import './../../templates/all_css/css/animate.css'
+// import './../../templates/all_css/css/magnific-popup.css'
+// import './../../templates/all_css/css/responsive.css'
+
+/*
+
+
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" href="css/colors.php?color=7B6ED6" type="text/css" />
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+*/
+
+ 
+//"css/font-icons.css"
 
 import './../../templates/all_css/css/bootstrap.css'
 

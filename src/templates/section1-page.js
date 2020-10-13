@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import { Spring } from 'react-spring/renderprops'
+import Header from '../components/Header';
 import './all_css/style.css'
 import './all_css/css/custom.css'
 import './all_css/css/resume.css'
@@ -15,6 +16,7 @@ export const Section1Template = (data) => {
 const imageData = data.background_image.childImageSharp.fluid;
 
   return  (   <div  className="myWrapper">
+    <Header />
   < section id={`slider`} className="slider-element full-screen force-full-screen clearfix"
       style={{ height: "100vh" }}
     >

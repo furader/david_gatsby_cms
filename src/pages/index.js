@@ -8,6 +8,7 @@ import { Section1Template } from '../templates/section1-page'
 
 import { Section2Template } from '../templates/section2-page'
 import { Section3Template } from '../templates/section3-page'
+import Header from '../components/Header';
 
 
 
