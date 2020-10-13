@@ -5,6 +5,7 @@ import './all_css/css/custom.css'
 import './all_css/css/resume.css'
 import './all_css/css/resume_fonts.css'
 import Carousel from 'react-multi-carousel';
+import ReactPlayer from 'react-player';
 import { VideoModal } from '../components/VideoModal'
 //import { MyVideos } from '../components/VideoModal'
 import 'react-multi-carousel/lib/styles.css';
@@ -48,32 +49,34 @@ export class Section2Template extends React.Component {
       ext: "?autoplay=1&amp;modestbranding=1&amp;showinfo=0",
       isClosed: true,
       dataAll: data,
-      responsive: responsive
+      responsive: responsive,
+      playing:false
     }
-    
+
   }
-  closeModal = () =>{
+  closeModal = () => {
     console.log("close modal");
     this.setState({
-      source: ""
+      source: "",
+      playing: false
     });
   }
   openModal = (sr) => {
     console.log("open modal");
     console.log(sr);
-    if(sr) {
+    if (sr) {
       sr = sr.trim();
     }
     this.setState({
-      source: sr
+      source: sr,
+      playing:true
     });
-    this.forceUpdate();
   }
   render() {
     console.log(this.state)
     const id = `videoModalId`;
-const pas = this.openModal;
-const forPreview = this.state.dataAll.forPreview === true ? true: false;
+    const pas = this.openModal;
+    const forPreview = this.state.dataAll.forPreview === true ? true : false;
     return <section id={`content`} className="bg-dr">
 
       <div id={`section-testimonials`} className="content-wrap bg-dr" style={{ display: "block" }}>
@@ -86,7 +89,7 @@ const forPreview = this.state.dataAll.forPreview === true ? true: false;
           autoPlay={true}
           autoPlaySpeed={2000}
           keyBoardControl={true}
-         // customTransition="all 150"
+          // customTransition="all 150"
           transitionDuration={700}
           containerclassName="carousel-container"
           removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -95,7 +98,7 @@ const forPreview = this.state.dataAll.forPreview === true ? true: false;
           itemclassName="carousel-item-padding-40-px"
         >
           {
-            this.state.dataAll.testimonials.map((da,i) => {
+            this.state.dataAll.testimonials.map((da, i) => {
               da.id = id + i;
               return <div key={id} className="testimonial bg-dr-2 gradient" style={{ margin: " 0 30px -50px 30px" }}  >
                 <div className="testi-content" >
@@ -113,45 +116,62 @@ const forPreview = this.state.dataAll.forPreview === true ? true: false;
         </Carousel>
       </div>
       <div id={`section-videos`} className="content-wrap bg-dr bottommargin bottompadding">
-      <div className="portfolio portfolio-5 portfolio-full portfolio-notitle clearfix videoContainer" >
-          
-            {
-            this.state.dataAll.videos.map(function(vid, i){
-            vid.id = id + i;
-            vid.openMe = pas;
-            vid.forPreview = forPreview;
-            return <VideoModal {...vid}/> 
+        <div className="portfolio portfolio-5 portfolio-full portfolio-notitle clearfix videoContainer" >
+
+          {
+            this.state.dataAll.videos.map(function (vid, i) {
+              vid.id = id + i;
+              vid.openMe = pas;
+              vid.forPreview = forPreview;
+              return <VideoModal {...vid} />
             })
-              }
+          }
 
-  
-  <div className="modal fade" id={`videoModal`} role="dialog">
-  <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div className="modal-content">
-      <div className="modal-header bg-dark border-dark">
-        <button type="button" className="close text-white" onClick={this.closeModal}
-          data-dismiss="modal">&times;</button>
-      </div>
-      <div className="modal-body bg-dark p-0">
-        <div className="embed-responsive embed-responsive-16by9">
-          <iframe width="100%" height="100%" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            className="embed-responsive-item"
-            src={this.state.source} //{this.props.isClosed === true ? "" : this.props.source + ext}
-            allowFullScreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-          
+          <div className="modal fade" id={`videoModal`} role="dialog">
+            <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div className="modal-content">
+                <div className="modal-header bg-dark border-dark">
+                  <button type="button" className="close text-white" onClick={this.closeModal}
+                    data-dismiss="modal">&times;</button>
+                </div>
+                <div className="modal-body bg-dark p-0">
+                  <div className="embed-responsive embed-responsive-16by9">
+                    <ReactPlayer url={this.state.source}
+                      playing={this.state.playing}
+
+                      config={{
+                        youtube: {
+                          playerVars: {
+                            showinfo: 1,
+                            modestbranding: 1,
+                            controls: 1
+                          }
+                        },
+                        facebook: {
+                          appId: '12345'
+                        }
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </section>
   }
 }
-
+/*
+<iframe width="100%" height="100%"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      className="embed-responsive-item"
+                      src={this.state.source} //{this.props.isClosed === true ? "" : this.props.source + ext}
+                      allowFullScreen></iframe>
+*/
 
 const Section2Page = (a) => {
   const { data } = a;

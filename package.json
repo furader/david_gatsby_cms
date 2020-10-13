@@ -40,6 +40,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-multi-carousel": "^2.5.5",
+    "react-player": "^2.6.2",
     "react-spring": "^8.0.27",
     "scrollmonitor-react": "^2.4.1",
     "styled-components": "^5.2.0",
