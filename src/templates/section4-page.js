@@ -24,6 +24,9 @@ export class Section4Template extends React.Component {
     super(a);
     this.state = a;
 }
+componentWillReceiveProps(n){
+  this.setState(n);
+ }
   // <img src="img/DR3_2.jpg" alt="story-image" />
   render(){
     const imageData = !this.state.forPreview ? this.state.background_image.childImageSharp.fluid : this.state.background_image;
