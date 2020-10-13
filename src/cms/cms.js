@@ -4,6 +4,7 @@ import cloudinary from 'netlify-cms-media-library-cloudinary'
 import Section1Preview from  './preview-templates/Section1Preview'
 import Section2Preview from  './preview-templates/Section2Preview'
 import Section3Preview from  './preview-templates/Section3Preview'
+import Section4Preview from  './preview-templates/Section4Preview'
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
@@ -23,4 +24,5 @@ CMS.registerMediaLibrary(cloudinary)
 CMS.registerPreviewTemplate('section1', Section1Preview)
 CMS.registerPreviewTemplate('section2', Section2Preview)
 CMS.registerPreviewTemplate('section3', Section3Preview)
+CMS.registerPreviewTemplate('section4', Section4Preview)
    

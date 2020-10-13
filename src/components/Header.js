@@ -4,17 +4,17 @@ import React from 'react'
 
 const Header = ()=>{
     return (
-        <header id="header" className="transparent-header sticky-transparent static-sticky">
+        <header id={`header`} className="transparent-header sticky-transparent static-sticky">
 
-        <div id="header-wrap">
+        <div id={`header-wrap`}>
 
             <div className="container clearfix">
 
-                <div id="primary-menu-trigger"><i className="icon-reorder"></i></div>
+                <div id={`primary-menu-trigger`}><i className="icon-reorder"></i></div>
 
                 <div id="logo">
                 </div>
-                <nav id="primary-menu">
+                <nav id={`primary-menu`}>
 
                     <ul className="one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="0">
                         <li className="current"><a href="#" data-href="#slider"><i className="icon-home"></i>
@@ -23,7 +23,7 @@ const Header = ()=>{
                         <li><a href="#" data-href="#section-keynotes"><i className="icon-star"></i>
                                 <div>Talks</div>
                             </a></li>
-                        <li><a href="#" data-href="#section-videos"><i className="icon-film"></i>
+                        <li><a href="#" data-href={`#section-videos`}><i className="icon-film"></i>
                                 <div>Videos</div>
                             </a></li>
                         <li><a href="#" data-href="#section-about"><i className="icon-user"></i>

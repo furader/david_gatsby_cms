@@ -33,12 +33,11 @@ this.forceUpdate();
       this.setState({
         counter: this.state.counter + 1
       });
-      this.forceUpdate();
   }
 
   render(){
 
-    return ( <section className="content-wrap bg-info  "  >
+    return ( <section className="content-wrap  "  >
      <div className="row" style={{margin:0,padding:0, display:"flex",height:"10vh", justifyContent:"center"}}>
      <h1>  {this.state.title}</h1>
      </div>

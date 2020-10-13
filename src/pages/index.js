@@ -8,6 +8,7 @@ import { Section1Template } from '../templates/section1-page'
 
 import { Section2Template } from '../templates/section2-page'
 import { Section3Template } from '../templates/section3-page'
+import { Section4Template } from '../templates/section4-page'
 import Header from '../components/Header';
 
 
@@ -29,6 +30,7 @@ const IndexPage = (a) => {
   const section1 = data.section1;
   const section2 = data.section2;
   const section3 = data.section3;
+  const section4 = data.section4;
 
   return <>
     <Section1Template
@@ -36,7 +38,7 @@ const IndexPage = (a) => {
     />
     <Section2Template {...section2.frontmatter} />
     <Section3Template {...section3.frontmatter} />
-    
+    <Section4Template {...section4.frontmatter}/>
   </>
 
 
@@ -104,6 +106,20 @@ query {
       identifier
       description
       description1
+    }
+  }
+  section4:  markdownRemark(frontmatter: {identifier: {eq: "section4"}}) {
+    frontmatter {
+      title
+      description
+      link_full_bio
+      background_image {
+        childImageSharp {
+          fluid (maxWidth: 3000,quality: 100){
+            ...GatsbyImageSharpFluid_withWebp_noBase64
+          }
+        }
+      }
     }
   }
 }
