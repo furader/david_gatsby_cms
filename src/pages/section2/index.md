@@ -59,7 +59,7 @@ videos:
     source: https://www.youtube.com/embed/kklyo_6sHVc
     video_title: On Non-Bullshit Innovation
     location: Slovakia Tech Forum, Nov 2019
-  - source: https://www.youtube.com/embed/pxer6LY5JZg
+  - source: https://youtu.be/pxer6LY5JZg
     video_title: bnm
     location: cccc
     thumbnail: /img/jumbotron.jpg
