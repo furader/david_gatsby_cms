@@ -63,4 +63,8 @@ videos:
     video_title: bnm
     location: cccc
     thumbnail: /img/jumbotron.jpg
+  - source: https://www.youtube.com/embed/Y_h1C94ZpzA
+    thumbnail: /img/products-full-width.jpg
+    video_title: xxxxx
+    location: xxxx
 ---
