@@ -46,7 +46,7 @@ export class VideoModal extends React.Component {
     const forPreview = this.state.forPreview;
     var imageData;
     var holder;
-    if(!this.state.thumbnail || this.state.thumbnail.trim().length === 0){
+    if(!this.state.thumbnail ){
       console.log("empppppppppppppppt");
       imageData=""; holder = !forPreview ?  <Img fluid={imageData} /> : <img src={imageData} alt={tit}></img>;
     }else{
