@@ -24,7 +24,6 @@ export class Section3Template extends React.Component {
 this.state = a;
 console.log("from section 3:");
 console.log(a.title);
-this.forceUpdate();  
 }
   
 

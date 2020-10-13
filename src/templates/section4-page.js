@@ -29,9 +29,10 @@ componentWillReceiveProps(n){
  }
   // <img src="img/DR3_2.jpg" alt="story-image" />
   render(){
+    
     const imageData = !this.state.forPreview ? this.state.background_image.childImageSharp.fluid : this.state.background_image;
     const im = !this.state.forPreview ?  <Img fluid={imageData} /> : <img src={imageData} alt="story-image" />
-    return ( <section id="content" class="bg-dr">
+    return ( <section id="content" className="bg-dr">
        <div id={`section-about`} className="container topmargin-lg clearfix">
 
     <div className="divcenter" style={{maxWidth:"960px"}} >

@@ -26,10 +26,11 @@ export class VideoModal extends React.Component {
     });
   }
   componentWillReceiveProps(data){
+    //"?autoplay=1&amp;modestbranding=1&amp;showinfo=0",
     this.setState({
       
         forPreview: data.forPreview,
-        source: data.source + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0",
+        source: data.source + "?autoplay=1",
         isClosed: true,
         location: data.location,
         thumbnail: data.thumbnail,

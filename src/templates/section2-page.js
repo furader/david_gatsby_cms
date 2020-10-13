@@ -60,6 +60,9 @@ export class Section2Template extends React.Component {
   }
   openModal = (sr) => {
     console.log("open modal");
+    if(sr) {
+      sr = sr.trim();
+    }
     this.setState({
       source: sr
     });
@@ -130,7 +133,7 @@ const forPreview = this.state.dataAll.forPreview === true ? true: false;
       </div>
       <div className="modal-body bg-dark p-0">
         <div className="embed-responsive embed-responsive-16by9">
-          <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          <iframe width="100%" height="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             className="embed-responsive-item"
             src={this.state.source} //{this.props.isClosed === true ? "" : this.props.source + ext}
             allowFullScreen></iframe>
