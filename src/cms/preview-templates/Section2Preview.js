@@ -61,10 +61,11 @@ import './../../templates/all_css/css/bootstrap.css'
         dataAll: data,
         responsive: responsive
       }
-      this.forceUpdate();
+     // this.forceUpdate();
     }
     componentWillReceiveProps(n){
       const da = n.entry.getIn(['data']).toJS();
+      da.forPreview = true;
       this.setState({
         dataAll: da
       });
@@ -82,6 +83,7 @@ import './../../templates/all_css/css/bootstrap.css'
       });
       this.forceUpdate();
     }
+    
     render() {
       console.log(this.state)
       const id = `videoModalId`;
@@ -113,7 +115,7 @@ import './../../templates/all_css/css/bootstrap.css'
   
                 return <div key={i} className="testimonial bg-dr-2 gradient" style={{ margin: " 0 30px -50px 30px" }}  >
                   <div className="testi-content" >
-                    <p> {da.quote.trim()} </p>
+                    <p> {!da.quote ? "" : da.quote.trim()} </p>
                     <div className="testi-meta">
                       {da.author}
                     </div>
@@ -134,6 +136,8 @@ import './../../templates/all_css/css/bootstrap.css'
               vid.id = id + i;
               vid.openMe = pas;
               vid.forPreview = forPreview;
+              console.log("from 2 preview");
+              console.log(vid.forPreview);
               return <VideoModal {...vid}/> 
               })
                 }
