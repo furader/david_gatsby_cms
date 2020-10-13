@@ -7,6 +7,7 @@ import './../../templates/all_css/style.css'
 import './../../templates/all_css/css/custom.css'
 import './../../templates/all_css/css/resume.css'
 import './../../templates/all_css/css/resume_fonts.css'
+import TemplateWrapper from './../../components/Layout'
 
 import './../../templates/all_css/css/bootstrap.css'
 
@@ -86,7 +87,8 @@ import './../../templates/all_css/css/bootstrap.css'
       const id = `videoModalId`;
   const pas = this.openModal;
   const forPreview = this.state.dataAll.forPreview === true ? true: false;
-      return <section id={`content`} className="bg-dr">
+      return <TemplateWrapper >
+      <section id={`content`} className="bg-dr">
   
         <div id={`section-testimonials`} className="content-wrap bg-dr" style={{ display: "block" }}>
           <h3 className="center dr-heading myCaroTitle">{this.state.dataAll.title}</h3>
@@ -160,6 +162,7 @@ import './../../templates/all_css/css/bootstrap.css'
           </div>
         </div>
       </section>
+      </TemplateWrapper>
     }
   }
   

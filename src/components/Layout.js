@@ -4,14 +4,11 @@ import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  //const { title, description } = useSiteMetadata()
   return (
     <div>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
-
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -35,10 +32,12 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
+        <script src="./../templates/all_css//js/plugins.js" />
+	<script src="./../templates/all_css/js/functions.js" />
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={title} />
+        
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
@@ -49,5 +48,6 @@ const TemplateWrapper = ({ children }) => {
     </div>
   )
 }
-
+// 
+// 
 export default TemplateWrapper
