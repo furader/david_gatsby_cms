@@ -7,15 +7,19 @@ import Section3Preview from  './preview-templates/Section3Preview'
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
-if (module.hot) {
-    console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-console.log("it;s htttt");
-    console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-    module.hot.accept('./preview-templates/Section3Preview', function() {
-      const Section3Preview = require('./preview-templates/Section3Preview')
-      CMS.registerPreviewTemplate('section3', Section3Preview);
-    });
-  }
+// if (module.hot) {
+//     console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+// console.log("it;s htttt");
+//     console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+//     module.hot.accept('./preview-templates/Section3Preview', function() {
+
+//         console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+//         console.log("special");
+//             console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+//       const Section3Preview = require('./preview-templates/Section3Preview')
+//       CMS.registerPreviewTemplate('section3', Section3Preview);
+//     });
+//   }
 CMS.registerPreviewTemplate('section1', Section1Preview)
 CMS.registerPreviewTemplate('section2', Section2Preview)
 CMS.registerPreviewTemplate('section3', Section3Preview)

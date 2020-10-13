@@ -28,15 +28,22 @@ import './../../templates/all_css/css/bootstrap.css'
      constructor(a) { 
        super(a);
        const { entry, getAsset } = a;
-          const data = entry.getIn(['data']).toJS();
-          this.state = data;
+          const da = entry.getIn(['data']).toJS();
+          this.state = da;
           console.log("preview 3 is updating");
-          console.log(data.title);
+          console.log(da.title);
           this.forceUpdate();
      }
-    
-     render = ()=>{
+     componentDidUpdate = (b)=>{
       
+
+     }
+     componentWillReceiveProps(n){
+      const da = n.entry.getIn(['data']).toJS();
+      this.setState(da);
+     }
+     render = ()=>{
+     // const data = this.props.entry.getIn(['data']).toJS();
       return (
         <section className="content-wrap bg-info  "  >
      <div className="row" style={{margin:0,padding:0, display:"flex",height:"10vh", justifyContent:"center"}}>

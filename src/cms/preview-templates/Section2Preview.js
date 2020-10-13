@@ -62,6 +62,12 @@ import './../../templates/all_css/css/bootstrap.css'
       }
       this.forceUpdate();
     }
+    componentWillReceiveProps(n){
+      const da = n.entry.getIn(['data']).toJS();
+      this.setState({
+        dataAll: da
+      });
+     }
     closeModal = () =>{
       console.log("close modal");
       this.setState({

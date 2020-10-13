@@ -51,4 +51,12 @@ videos:
     thumbnail: /img/video-grid-4.png
     video_title: On Non-Bullshit Innovation
     location: USI Paris, Jun 2019
+  - thumbnail: /img/video-grid-2.png
+    video_title: Enough of the BS Innovation!
+    location: Internetdagarna, Nov 2019
+    source: https://www.youtube.com/embed/EXrc0W4CXSk
+  - thumbnail: /img/video-grid-3.png
+    source: https://www.youtube.com/embed/kklyo_6sHVc
+    video_title: On Non-Bullshit Innovation
+    location: Slovakia Tech Forum, Nov 2019
 ---
