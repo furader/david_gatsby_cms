@@ -30,7 +30,7 @@ export class VideoModal extends React.Component {
     this.setState({
       
         forPreview: data.forPreview,
-        source: data.source + "?autoplay=1",
+        source: data.source + "?autoplay=1&mute=1",
         isClosed: true,
         location: data.location,
         thumbnail: data.thumbnail,
