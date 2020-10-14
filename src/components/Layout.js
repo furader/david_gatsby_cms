@@ -32,7 +32,8 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
-        
+        <link rel="stylesheet" href="./../templates/all_css/css/colors.php?color=7B6ED6" 
+        type="text/css" />
 	<script src="./../templates/all_css/js/functions.js" />
   <script src="./../templates/all_css/js/plugins.js" />
   <script src="./../templates/all_css/js/jquery.js"></script>
