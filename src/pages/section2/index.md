@@ -39,33 +39,8 @@ testimonials:
   - author: Salesforce
     quote: David Rowan was awesome, lots of amazing feedback.
 videos:
-  - source: https://www.youtube.com/embed/EXrc0W4CXSk
-    thumbnail: /img/video-grid-1.png
-    video_title: Business Opportunities from Tech
-    location: Mercer Global Investment Forum
-  - source: https://www.youtube.com/embed/kklyo_6sHVc
-    thumbnail: /img/video-grid-5.png
-    video_title: On Non-Bullshit Innovation
-    location: PropTech, 2018
   - thumbnail: /img/video-grid-3.png
     source: https://youtu.be/kklyo_6sHVc
     video_title: On Non-Bullshit Innovation
     location: Slovakia Tech Forum, Nov 2019
-  - source: https://youtu.be/pxer6LY5JZg
-    video_title: bnm
-    location: cccc
-    thumbnail: /img/jumbotron.jpg
-  - source: https://www.youtube.com/embed/Y_h1C94ZpzA
-    thumbnail: /img/products-full-width.jpg
-    video_title: xxxxx
-    location: xxxx
-  - source: https://www.youtube.com/embed/4W44RoUciyk
-    thumbnail: /img/video-grid-4.png
-    video_title: On Non-Bullshit Innovation
-    location: USI Paris, Jun 2019
-  - thumbnail: /img/video-grid-2.png
-    video_title: Enough of the BS Innovation!
-    location: Internetdagarna, Nov 2019
-    source: https://www.youtube.com/embed/EXrc0W4CXSk
-  
 ---

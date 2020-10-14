@@ -116,7 +116,7 @@ export class Section2Template extends React.Component {
         </Carousel>
       </div>
       <div id={`section-videos`} className="content-wrap bg-dr bottommargin bottompadding">
-        <div className="portfolio portfolio-5 portfolio-full portfolio-notitle clearfix videoContainer" >
+        <div className="row portfolio portfolio-5 portfolio-full portfolio-notitle clearfix videoContainer" >
 
           {
             this.state.dataAll.videos.map(function (vid, i) {

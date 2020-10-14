@@ -41,7 +41,7 @@ console.log(a.title);
      <h1>  {this.state.title}</h1>
      </div>
      <div className="row ">
-       <div className="col bg-success" style={{alignItems:"center",borderRadius:"100px",margin:0,padding:0, display:"flex",height:"20vh", justifyContent:"center"}}>
+       <div className="col-sm-1 col-lg-8 col-md-3 bg-success" style={{alignItems:"center",borderRadius:"100px",margin:0,padding:0, display:"flex",height:"20vh", justifyContent:"center"}}>
        {this.state.description}
        </div>
        <div className="col bg-success" style={{alignItems:"center",borderRadius:"100px",margin:0,padding:0, display:"flex",height:"20vh", justifyContent:"center"}}>
