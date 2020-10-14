@@ -7,6 +7,7 @@ import './all_css/css/resume_fonts.css'
 import Carousel from 'react-multi-carousel';
 import ReactPlayer from 'react-player';
 import { VideoModal } from '../components/VideoModal'
+import {Link} from 'gatsby'
 //import { MyVideos } from '../components/VideoModal'
 import 'react-multi-carousel/lib/styles.css';
 
@@ -77,7 +78,7 @@ export class Section2Template extends React.Component {
     const id = `videoModalId`;
     const pas = this.openModal;
     const forPreview = this.state.dataAll.forPreview === true ? true : false;
-    return <section id={`content`} className="bg-dr">
+    return <section id={`content1`} className="bg-dr">
 
       <div id={`section-testimonials`} className="content-wrap bg-dr" style={{ display: "block" }}>
         <h3 className="center dr-heading myCaroTitle">{this.state.dataAll.title}</h3>

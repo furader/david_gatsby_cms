@@ -5,6 +5,10 @@ import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children }) => {
   //const { title, description } = useSiteMetadata()
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
   return (
     <div>
       <Helmet>
@@ -32,11 +36,8 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
-        <link rel="stylesheet" href="./../templates/all_css/css/colors.php?color=7B6ED6" 
-        type="text/css" />
-	<script src="./../templates/all_css/js/functions.js" />
-  <script src="./../templates/all_css/js/plugins.js" />
-  <script src="./../templates/all_css/js/jquery.js"></script>
+       
+
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
@@ -52,6 +53,11 @@ const TemplateWrapper = ({ children }) => {
   )
 }
 /*
+	<script src="./../templates/all_css/js/functions.js" />
+  <script src="./../templates/all_css/js/plugins.js" />
+  <script src="./../templates/all_css/js/jquery.js"></script>
+ <link rel="stylesheet" href="./../templates/all_css/css/colors.php?color=7B6ED6" 
+        type="text/css" />
 //  <script src="./../templates/all_css/js/jquery.js"></script>
 // 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

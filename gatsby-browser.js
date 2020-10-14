@@ -1,3 +1,30 @@
+const addScript = url => {
+  const script = document.createElement("script")
+  script.src = url
+  script.async = true
+  document.body.appendChild(script)
+}
+
+export const onClientEntry = () => {
+  window.onload = () => {
+
+    // console.log("ffrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr")
+    //  addScript("./static/all_css/js/jquery.js")
+    //  addScript("./static/all_css/js/plugins.js")
+    //  addScript("./static/all_css/js/functions.js")
+    
+  }
+}
+
+/*
+
+
+
+<script src="./all_css/js/jquery.js" />
+ <script src="./all_css/js/jquery.js"></script>
+	<script src="./all_css/js/plugins.js" />
+  <script src="./all_css/js/functions.js" />
+  */
 // const $ = require("jquery")
 
 // export const onClientEntry = () => {

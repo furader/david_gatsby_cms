@@ -20,20 +20,14 @@ import './all_css/css/bootstrap.css'
 
 export class Section4Template extends React.Component {
 
-  constructor(a){
-    super(a);
-    this.state = a;
-}
-componentWillReceiveProps(n){
-  this.setState(n);
- }
+ 
+
   // <img src="img/DR3_2.jpg" alt="story-image" />
   render(){
     
-    const imageData = !this.state.forPreview ? this.state.background_image.childImageSharp.fluid : this.state.background_image;
-    const im = !this.state.forPreview ?  <Img fluid={imageData} /> : <img src={imageData} alt="story-image" />
-    return ( <section id="content" className="bg-dr">
-       <div id={`section-about`} className="container topmargin-lg clearfix">
+    const imageData = !this.props.forPreview ? this.props.background_image.childImageSharp.fluid : this.props.background_image;
+    const im = !this.props.forPreview ?  <Img fluid={imageData} /> : <img src={imageData} alt="story-image" />
+    return (        <div id={`section-about`} className="container topmargin-lg clearfix">
 
     <div className="divcenter" style={{maxWidth:"960px"}} >
       <div className="tabs tabs-alt tabs-responsive tabs-justify clearfix" id="tab">
@@ -47,12 +41,12 @@ componentWillReceiveProps(n){
                 
               </div>
               <div data-animate="fadeInLeft" data-delay="600" className="story-box-info">
-  <h3 className="story-title dr-heading">{this.state.title}</h3>
+  <h3 className="story-title dr-heading">{this.props.title}</h3>
                 <div className="story-box-content">
-  <p>{this.state.description}</p>
+  <p>{this.props.description}</p>
                   <a className="team" data-toggle="modal" data-target=".bs-example-modal-lg4">
                     <button className="button button-large button-border button-white button-dark noleftmargin">
-  {this.state.link_full_bio}</button></a>
+  {this.props.link_full_bio}</button></a>
                 </div>
               </div>
             </div>
@@ -64,7 +58,6 @@ componentWillReceiveProps(n){
     </div>
 
   </div>
-  </section>
     );
   }
 }

@@ -27,40 +27,11 @@ export default function HTML(props) {
 	<link rel="stylesheet" href="./all_css/css/responsive.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<link rel="stylesheet" href="./all_css/css/colors.php?color=7B6ED6" type="text/css" />
 	<link rel="stylesheet" href="./all_css/css/custom.css" type="text/css" />
 	
 	
-	<script src="./all_css/js/jquery.js" />
- <script src="./all_css/js/jquery.js"></script>
-	<script src="./all_css/js/plugins.js" />
-	<script src="./all_css/js/functions.js" />
 
-<script
-  dangerouslySetInnerHTML={{
-    __html: `
-           
-        
-    jQuery(window).scroll(function() {
 
-      console.log("scroooling");
-			var pixs = jQuery(window).scrollTop(),
-				opacity = pixs / 650,
-				element = jQuery( '.blurred-img' ),
-				elementHeight = element.outerHeight(),
-        elementNextHeight = jQuery('.content-wrap').find('.page-section').first().outerHeight();
-        
-        
-			if( ( elementHeight + elementNextHeight + 50 ) > pixs ) {
-				element.addClass('blurred-image-visible');
-        element.css({ 'opacity': opacity });
-			} else {
-        element.removeClass('blurred-image-visible');
-			}
-		});
-        `,
-  }}
-/>
 <script
 dangerouslySetInnerHTML={{
     __html: `
@@ -68,6 +39,8 @@ dangerouslySetInnerHTML={{
   {props.headComponents}
       </head>
       <body  className="stretched sticky-responsive-menu" {...props.bodyAttributes}>
+	  
+
         {props.preBodyComponents}
         <div
           key={`body`}
@@ -104,6 +77,38 @@ dangerouslySetInnerHTML={{
 	</div>
 </div>
 
+	
+<script src="./all_css/js/jquery.js" />
+	<script src="./all_css/js/plugins.js" />
+	<script src="./all_css/js/functions.js" />
+	<script
+  dangerouslySetInnerHTML={{
+    __html: `
+        console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");   
+	console.log(jQuery);
+	console.log($);  
+    jQuery(window).scroll(function() {
+
+	  console.log("scroooling");
+	  console.log(jQuery);
+	  console.log($);
+			var pixs = jQuery(window).scrollTop(),
+				opacity = pixs / 650,
+				element = jQuery( '.blurred-img' ),
+				elementHeight = element.outerHeight(),
+        elementNextHeight = jQuery('.content-wrap').find('.page-section').first().outerHeight();
+        
+        
+			if( ( elementHeight + elementNextHeight + 50 ) > pixs ) {
+				element.addClass('blurred-image-visible');
+        element.css({ 'opacity': opacity });
+			} else {
+        element.removeClass('blurred-image-visible');
+			}
+		});
+        `,
+  }}
+/>
       </body>
     </html>
   )
@@ -120,7 +125,9 @@ HTML.propTypes = {
 
 /*
 <script src="./all_css/js/jquery.js" />
- <script src="./all_css/js/jquery.js"></script>
+	<script src="./all_css/js/plugins.js" />
+	<script src="./all_css/js/functions.js" />
+<script src="./all_css/js/jquery.js" />
 	<script src="./all_css/js/plugins.js" />
 	<script src="./all_css/js/functions.js" />
 
