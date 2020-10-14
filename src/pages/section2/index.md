@@ -38,11 +38,20 @@ testimonials:
       about your keynote. You delivered an outstanding session.
   - author: Salesforce
     quote: David Rowan was awesome, lots of amazing feedback.
-videos: 
+videos:
   - thumbnail: /img/video-grid-3.png
     source: https://youtu.be/kklyo_6sHVc
     video_title: On Non-Bullshit Innovation
     location: Slovakia Tech Forum, Nov 2019
     visible: false
-
+  - visible: true
+    source: https://youtu.be/EXrc0W4CXSk
+    thumbnail: /img/video-grid-1.png
+    video_title: Business Opportunities from Tech
+    location: Mercer Global Investment Forum
+  - visible: true
+    thumbnail: /img/video-grid-5.png
+    source: https://youtu.be/kklyo_6sHVc
+    video_title: On Non-Bullshit Innovation
+    location: PropTech, 2018
 ---
