@@ -29,10 +29,12 @@ export default function HTML(props) {
 
 	<link rel="stylesheet" href="./all_css/css/colors.php?color=7B6ED6" type="text/css" />
 	<link rel="stylesheet" href="./all_css/css/custom.css" type="text/css" />
-	<link rel="stylesheet" href="./all_css/css/colors.php?color=7B6ED6" 
-        type="text/css" />
 	
- 
+	
+	<script src="./all_css/js/jquery.js" />
+ <script src="./all_css/js/jquery.js"></script>
+	<script src="./all_css/js/plugins.js" />
+	<script src="./all_css/js/functions.js" />
 
 <script
   dangerouslySetInnerHTML={{
@@ -122,5 +124,8 @@ HTML.propTypes = {
 	<script src="./all_css/js/plugins.js" />
 	<script src="./all_css/js/functions.js" />
 
+
+	<link rel="stylesheet" href="./all_css/css/colors.php?color=7B6ED6" 
+        type="text/css" />
 
 */
