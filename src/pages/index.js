@@ -93,6 +93,7 @@ query {
       videos {
         location
         source
+        visible
         thumbnail{
           childImageSharp {
             fluid (maxWidth: 3000,quality: 100){

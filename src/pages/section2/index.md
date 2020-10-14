@@ -54,4 +54,9 @@ videos:
     source: https://youtu.be/kklyo_6sHVc
     video_title: On Non-Bullshit Innovation
     location: PropTech, 2018
+  - visible: true
+    thumbnail: /img/DR1_edit_2.png
+    source: https://youtu.be/pxer6LY5JZg
+    video_title: crazy video
+    location: there
 ---
