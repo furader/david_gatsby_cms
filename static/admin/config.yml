@@ -41,7 +41,7 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Identifier, name: identifier, widget: "hidden"}
           - {label: Testimonials, name: testimonials, widget: list,fields: [{label: Author, name: author, widget: string},{label: Quote, name: quote, widget: string}]}
-          - {label: Youtube Videos, name: videos, widget: list,fields: [{label: Thumbnail, name: thumbnail, widget: image},{label: Source, name: source, widget: string},{label: Video Title, name: video_title, widget: string},{label: Location, name: location, widget: string}]}
+          - {label: Youtube Videos, name: videos, widget: list,fields: [{label: Thumbnail, name: thumbnail, widget: image},{label: Source, name: source, widget: string},{label: Video Title, name: video_title, widget: string},{label: Location, name: location, widget: string},{label: Visible, name: visible, widget: boolean}]}
       
       - file: "src/pages/section3/index.md" 
         label: "Section3 Page"

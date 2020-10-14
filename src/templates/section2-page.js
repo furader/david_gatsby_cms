@@ -123,7 +123,11 @@ export class Section2Template extends React.Component {
               vid.id = id + i;
               vid.openMe = pas;
               vid.forPreview = forPreview;
+              if(vid.visible){
               return <VideoModal {...vid} />
+              }else{
+                return;
+              }
             })
           }
 

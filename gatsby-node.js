@@ -51,9 +51,9 @@ exports.createPages = ({ actions, graphql }) => {
 
       if(edge.node.frontmatter && edge.node.frontmatter.identifier && edge.node.frontmatter.identifier.indexOf("sect") >= 0){
           
-  console.log("################################################################")
-  console.log(edge.node.frontmatter);
-    console.log("################################################################")
+  // console.log("################################################################")
+  // console.log(edge.node.frontmatter);
+  //   console.log("################################################################")
       }
     
       createPage({
@@ -80,9 +80,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   fmImagesToRelative(node) // convert image paths for gatsby images
 if(node.frontmatter && node.frontmatter.identifier && node.frontmatter.identifier.indexOf("sect") >= 0){
-  console.log("(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((");
-console.log(node);
-  console.log("(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((");
+//   console.log("(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((");
+// console.log(node);
+//   console.log("(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((");
   
 }
   if (node.internal.type === `MarkdownRemark`) {
