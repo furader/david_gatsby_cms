@@ -3,9 +3,10 @@ import { graphql } from 'gatsby'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import './all_css/style.css'
-import './all_css/css/custom.css'
-import './all_css/css/resume.css'
+import './../../static/all_css/style.css'
+import './../../static/all_css/css/custom.css'
+import './../../static/all_css/css/resume.css'
+import './../../static/all_css/css/resume_fonts.css'
 // import './all_css/css/resume_fonts.css'
 // 
 // import './all_css/css/resume_fonts.css'
@@ -21,7 +22,7 @@ import {
   isMobile, isTablet
 } from "react-device-detect";
 
-import './all_css/css/bootstrap.css'
+import './../../static/all_css/css/bootstrap.css'
 
 
 export class Section3Template extends React.Component {
@@ -33,19 +34,19 @@ export class Section3Template extends React.Component {
       superLargeDesktop: {
         // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
-        items: 5
+        items: 10
       },
       desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 3
+        items: 8
       },
       tablet: {
         breakpoint: { max: 900, min: 464 },
-        items: 2
+        items: 5
       },
       mobile: {
         breakpoint: { max: 464, min: 0 },
-        items: 1
+        items: 4
       }
     };
     this.state = {
@@ -71,7 +72,6 @@ export class Section3Template extends React.Component {
           containerclassName="carousel-container"
           removeArrowOnDeviceType={["tablet", "mobile"]}
           deviceType={isMobile === true ? "mobile" : isTablet === true ? "tablet" : "desktop"}
-          dotListclassName="custom-dot-list-style"
           itemclassName="carousel-item-padding-40-px"
         >
           <div className="oc-item text-center">

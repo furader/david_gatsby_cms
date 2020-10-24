@@ -3,13 +3,14 @@ import { Section2Template } from '../../templates/section2-page'
 import PropTypes from 'prop-types'
 import { Section1Template } from '../../templates/section1-page'
 import { Spring } from 'react-spring/renderprops'
-import './../../templates/all_css/style.css'
-import './../../templates/all_css/css/custom.css'
-import './../../templates/all_css/css/resume.css'
-import './../../templates/all_css/css/resume_fonts.css'
+import './../../../static/all_css/style.css'
+import './../../../static/all_css/css/custom.css'
+import './../../../static/all_css/css/resume.css'
+import './../../../static/all_css/css/resume_fonts.css'
+
+import './../../../static/all_css/css/bootstrap.css'
 import TemplateWrapper from './../../components/Layout'
 
-import './../../templates/all_css/css/bootstrap.css'
 
   import Carousel from 'react-multi-carousel';
   import { VideoModal } from './../../components/VideoModal'

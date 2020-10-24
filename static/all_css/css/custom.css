@@ -4,6 +4,82 @@
 	Add all your Custom Styled CSS here for New Styles or
 	Overwriting Default Theme Styles for Better Handling Updates
 -----------------------------------------------------------------*/
+
+.videoContainer{
+  margin: 0px 0px 0px 0px !important; 
+  padding: 0px 0px 0px 0px !important;
+}
+.caroCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px;
+}
+/*//d-flex flex-column justify-content-center align-items-center*/
+.caroImageContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.caroDescriptionContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.myCaro{
+  font-weight: 300!important; 
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+.myCaroTitle.dr-heading {
+
+  color: #C9C5C2!important;
+}
+.theBlurredOne{
+  position: fixed; width: 100%; top: 0; left: 0; 
+ /* background: #fff url('../../../img/DR1_edit.png') no-repeat top center; */
+  background-size: cover; background-attachment: fixed;
+
+}
+.stretched .myWrapper {
+  width: 100%;
+  margin: 0;
+  box-shadow: none;
+}
+.myWrapper{
+	position: relative;
+	float: none;
+	width: 1220px;
+	margin: 0 auto;
+	background-color: #FFF;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  opacity: 1;
+  animation-duration: 1500ms;
+  margin: 0;
+}
+ .section1{
+  position: fixed; 
+  width: 100%; 
+  /* background: #FFF url('../../../img/DR1_edit.png') no-repeat top center; */
+  background-size: cover;
+   background-attachment: fixed;
+} 
+.section1Background{
+  height: 100vh;
+  position: fixed !important;
+  width: 100%; 
+  /* background: #FFF no-repeat top center; */
+  background-size: cover;
+   background-attachment: fixed;
+}
+
+
+
 @media (max-width: 450px) {
 	.dippi-mobile-bio {
 		font-size: 15px!important;
@@ -36,19 +112,19 @@ div.dippi-class {
 
 } */
 .bg-dr {
-    background-color: #303030!important;
+    background-color: #303030 !important;
 }
 
 .bg-dr-2 {
-    background-color: #C9C5C2!important;
+    background-color: #C9C5C2 !important;
 }
 
 .bg-dr-3 {
-		background-color: #F8F9F3!important;
+		background-color: #F8F9F3 !important;
 }
 
 .bg-dr-4 {
-		background-color: #303030!important;
+		background-color: #303030 !important;
 }
 
 .gradient {

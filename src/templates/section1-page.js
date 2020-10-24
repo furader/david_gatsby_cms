@@ -3,11 +3,16 @@ import { graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import { Spring } from 'react-spring/renderprops'
 import Header from '../components/Header';
-import './all_css/style.css'
-import './all_css/css/custom.css'
-import './all_css/css/resume.css'
-import './all_css/css/resume_fonts.css'
-//import './all_css/css/colors.php?color=7B6ED6'
+// import './all_css/style.css'
+// import './all_css/css/custom.css'
+// import './all_css/css/resume.css'
+// import './all_css/css/resume_fonts.css'
+
+import './../../static/all_css/style.css'
+import './../../static/all_css/css/custom.css'
+import './../../static/all_css/css/resume.css'
+import './../../static/all_css/css/resume_fonts.css'
+//import './all_css/css/colors.php?color=7B6ED6'   style={{ height: "100vh" }}
 
 
 export const Section1Template = (data) => {
@@ -18,7 +23,7 @@ const imageData = data.background_image.childImageSharp.fluid;
   return  (   <div  className="myWrapper">
     <Header />
   < section id={`slider`} className="slider-element full-screen force-full-screen clearfix"
-      style={{ height: "100vh" }}
+     style={{ height: "100vh" }}
     >
       <BackgroundImage
         Tag="section"
@@ -151,7 +156,7 @@ query {
       background_image {
         childImageSharp {
           fluid (maxWidth: 3000,quality: 100){
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }

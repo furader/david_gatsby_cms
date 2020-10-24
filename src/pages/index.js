@@ -9,6 +9,7 @@ import { Section1Template } from '../templates/section1-page'
 import { Section2Template } from '../templates/section2-page'
 import { Section3Template } from '../templates/section3-page'
 import { Section4Template } from '../templates/section4-page'
+import { Section6Template } from '../templates/section6-page'
 import  Layout from '../components/Layout'
 import  Content from '../components/Content'
 import Header from '../components/Header';
@@ -33,16 +34,17 @@ const IndexPage = (a) => {
   const section2 = data.section2;
   const section3 = data.section3;
   const section4 = data.section4;
+  const section6 = data.section6;
 
   return   <Layout >
     <Section1Template
       {...section1.frontmatter}
     />
-    <Content>
     <Section2Template {...section2.frontmatter} />
     <Section3Template {...section3.frontmatter} />
     <Section4Template {...section4.frontmatter}/>
-    </Content>
+    <Section6Template {...section6.frontmatter}/>
+ 
     </Layout>
   
 
@@ -125,6 +127,22 @@ query {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
+      }
+    }
+  }
+  section6:  markdownRemark(frontmatter: {identifier: {eq: "section6"}}) {
+    frontmatter {
+      title
+      investments {
+       link
+       thumbnail{       
+        id
+        path:    absolutePath
+        relativePath
+        relativeDirectory
+      }
+       name
+       location        
       }
     }
   }

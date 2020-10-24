@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import { Section1Template } from '../../templates/section1-page'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Spring } from 'react-spring/renderprops'
-import './../../templates/all_css/style.css'
-import './../../templates/all_css/css/custom.css'
-import './../../templates/all_css/css/resume.css'
-import './../../templates/all_css/css/resume_fonts.css'
+import './../../../static/all_css/style.css'
+import './../../../static/all_css/css/custom.css'
+import './../../../static/all_css/css/resume.css'
+import './../../../static/all_css/css/resume_fonts.css'
 
-import './../../templates/all_css/css/bootstrap.css'
+import './../../../static/all_css/css/bootstrap.css'
 
 const Section1Preview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS();

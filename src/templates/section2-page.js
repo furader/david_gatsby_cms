@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import './all_css/style.css'
-import './all_css/css/custom.css'
-import './all_css/css/resume.css'
-import './all_css/css/resume_fonts.css'
+import './../../static/all_css/style.css'
+import './../../static/all_css/css/custom.css'
+import './../../static/all_css/css/resume.css'
+import './../../static/all_css/css/resume_fonts.css'
 import Carousel from 'react-multi-carousel';
 import ReactPlayer from 'react-player';
 import { VideoModal } from '../components/VideoModal'
@@ -18,7 +18,7 @@ import {
   isMobile, isTablet
 } from "react-device-detect";
 
-import './all_css/css/bootstrap.css'
+import './../../static/all_css/css/bootstrap.css'
 
 
 export class Section2Template extends React.Component {

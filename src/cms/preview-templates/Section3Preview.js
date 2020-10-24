@@ -2,15 +2,17 @@ import React from 'react'
 import { Section3Template } from '../../templates/section3-page'
 import PropTypes from 'prop-types'
 import { Spring } from 'react-spring/renderprops'
-import './../../templates/all_css/style.css'
-import './../../templates/all_css/css/custom.css'
-import './../../templates/all_css/css/resume.css'
-import './../../templates/all_css/css/resume_fonts.css'
-import './../../templates/all_css/css/font-icons.css'
+import './../../../static/all_css/style.css'
+import './../../../static/all_css/css/custom.css'
+import './../../../static/all_css/css/resume.css'
+import './../../../static/all_css/css/resume_fonts.css'
 
-import './../../templates/all_css/css/dark.css'
-import './../../templates/all_css/css/interior_fonts.css'
-import './../../templates/all_css/css/interior-design.css'
+import './../../../static/all_css/css/bootstrap.css'
+import './../../../static/all_css/css/font-icons.css'
+
+import './../../../static/all_css/css/dark.css'
+import './../../../static/all_css/css/interior_fonts.css'
+import './../../../static/all_css/css/interior-design.css'
 
 // import './../../templates/all_css/css/animate.css'
 // import './../../templates/all_css/css/magnific-popup.css'
@@ -32,7 +34,6 @@ import './../../templates/all_css/css/interior-design.css'
  
 //"css/font-icons.css"
 
-import './../../templates/all_css/css/bootstrap.css'
 
   import Carousel from 'react-multi-carousel';
   import { VideoModal } from '../../components/VideoModal'

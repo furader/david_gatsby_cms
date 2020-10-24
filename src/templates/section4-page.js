@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import './all_css/style.css'
-import './all_css/css/custom.css'
-import './all_css/css/resume.css'
-import './all_css/css/resume_fonts.css'
+import './../../static/all_css/style.css'
+import './../../static/all_css/css/custom.css'
+import './../../static/all_css/css/resume.css'
+import './../../static/all_css/css/resume_fonts.css'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -15,7 +15,7 @@ import {
   isMobile, isTablet
 } from "react-device-detect";
 
-import './all_css/css/bootstrap.css'
+import './../../static/all_css/css/bootstrap.css'
 
 
 export class Section4Template extends React.Component {

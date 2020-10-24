@@ -62,4 +62,13 @@ collections:
           - {label: Background_image, name: background_image, widget: image}
           - {label: Description, name: description, widget: "string"}    
           - {label: Description 1, name: description1, widget: "string"}
-          - {label: Link for full bio, name: link_full_bio, widget: "string"}    
+          - {label: Link for full bio, name: link_full_bio, widget: "string"}
+      - file: "src/pages/section6/index.md" 
+        label: "Section6 Page"
+        name: "section6"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "section3-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Identifier, name: identifier, widget: "hidden"}    
+          - {label: Category, name: category, widget: "string"}    
+          - {label: Investments, name: investments, widget: list,fields: [{label: Link, name: link, widget: string},{label: Thumbnail, name: thumbnail, widget: image},{label: Location, name: location, widget: string},{label: Name, name: name, widget: string}]}
