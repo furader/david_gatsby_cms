@@ -29,13 +29,6 @@ module.exports = {
         name: 'img',
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/static/img/logos2`,
-        name: 'logos',
-      },
-    },
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

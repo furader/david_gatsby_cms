@@ -80,14 +80,14 @@ export class Section2Template extends React.Component {
     const forPreview = this.state.dataAll.forPreview === true ? true : false;
     return <section id={`content1`} className="bg-dr">
 
-      <div id={`section-testimonials`} className="content-wrap bg-dr" style={{ display: "block" }}>
+      <div id={`section-testimonials`} className=" bg-dr" style={{ display: "block" }}>
         <h3 className="center dr-heading myCaroTitle">{this.state.dataAll.title}</h3>
         <Carousel responsive={this.state.responsive}
-          showDots={true}
+          showDots={false}
           responsive={this.state.responsive}
           ssr={true} // means to render carousel on server-side.
           infinite={true}
-          autoPlay={true}
+          autoPlay={false}
           autoPlaySpeed={2000}
           keyBoardControl={true}
           // customTransition="all 150"
@@ -101,7 +101,7 @@ export class Section2Template extends React.Component {
           {
             this.state.dataAll.testimonials.map((da, i) => {
               da.id = id + i;
-              return <div key={id} className="testimonial bg-dr-2 gradient" style={{ margin: " 0 30px -50px 30px" }}  >
+              return <div key={id} className="testimonial bg-dr-2 gradient" style={{ margin: " 0 30px 0px 30px" }}  >
                 <div className="testi-content" >
                   <p> {da.quote.trim()} </p>
                   <div className="testi-meta">
