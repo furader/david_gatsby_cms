@@ -4,7 +4,9 @@
 	Add all your Custom Styled CSS here for New Styles or
 	Overwriting Default Theme Styles for Better Handling Updates
 -----------------------------------------------------------------*/
-
+.portfolio-overlay{
+  display: block !important;
+}
 .videoContainer{
   margin: 0px 0px 0px 0px !important; 
   padding: 0px 0px 0px 0px !important;
@@ -50,7 +52,7 @@
   margin: 0;
   box-shadow: none;
 }
-.myWrapper{
+/*.myWrapper{
 	position: relative;
 	float: none;
 	width: 1220px;
@@ -62,7 +64,7 @@
   opacity: 1;
   animation-duration: 1500ms;
   margin: 0;
-}
+} */
  .section1{
   position: fixed; 
   width: 100%; 
@@ -77,10 +79,10 @@
    background: #FFF no-repeat top center; 
   background-size: cover;
    background-attachment: fixed;
-   resize: both;
   overflow: hidden;
+  display: inline-block !important;
 }
-.section1Background:before, .section1Background:after {
+/*.section1Background:before, .section1Background:after {
   content: '';
   display: block;
   position: absolute;
@@ -103,7 +105,7 @@
   background-position-y: top;
   background-repeat-x: no-repeat;
   background-repeat-y: no-repeat;
-}
+}*/
 
 
 

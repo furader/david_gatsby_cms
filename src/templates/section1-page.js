@@ -30,12 +30,7 @@ import './../../static/all_css/css/resume_fonts.css'
       >*/
 
 export const Section1Template =  (data) => {
-  console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-console.log(isMobile);
-console.log(isTablet);
-  console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-  const src = isMobile == true ? "/img/DR1.png" : isTablet  === true ? "/img/DR1_edit.png" : "/img/DR1_edit-min.jpg";
-//<img className="section1Background" src="/img/DR1_edit-min.jpg" alt="background image" />
+ //<img className="section1Background" src="/img/DR1_edit-min.jpg" alt="background image" />
 const imageData = data.background_image.childImageSharp.fluid;
 const id = "achivement";
   return  (   <div  className="myWrapper">
@@ -55,7 +50,7 @@ const id = "achivement";
 
         <div  className="notopmargin full-screen force-full-screen gradient ">
           <div className="container clearfix"  style={{width:"100%", marginLeft:"auto",marginRight:"auto" }}>
-            <div id={`mainText`} className="slider-caption dark slider-caption-left" style={{ top: "177.5px" }}>
+            <div id={`mainText`} className="slider-caption dark slider-caption-left" style={{ top: "177.5px " }}>
               <h2 className="font-primary ls5" data-animate="fadeIn"
                 style={{ color: "#303030" }} >{data.title}</h2>
               <Spring delay="500"
