@@ -1,8 +1,14 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import { Spring } from 'react-spring/renderprops'
-import Header from '../components/Header';
+import Header from '../components/Header';import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile, isTablet
+} from "react-device-detect";
+
+import { useStaticQuery,graphql } from 'gatsby'
 // import './all_css/style.css'
 // import './all_css/css/custom.css'
 // import './all_css/css/resume.css'
@@ -13,28 +19,43 @@ import './../../static/all_css/css/custom.css'
 import './../../static/all_css/css/resume.css'
 import './../../static/all_css/css/resume_fonts.css'
 //import './all_css/css/colors.php?color=7B6ED6'   style={{ height: "100vh" }}
+/*
+<BackgroundImage
+        Tag="section"
+        fixed={imageData}
+        className="section1Background"
+        backgroundColor={`#040e18`}
+        loading="eager"
 
+      >*/
 
-export const Section1Template = (data) => {
-  
-//const data = all.frontmatter;
+export const Section1Template =  (data) => {
+  console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+console.log(isMobile);
+console.log(isTablet);
+  console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+  const src = isMobile == true ? "/img/DR1.png" : isTablet  === true ? "/img/DR1_edit.png" : "/img/DR1_edit-min.jpg";
+//<img className="section1Background" src="/img/DR1_edit-min.jpg" alt="background image" />
 const imageData = data.background_image.childImageSharp.fluid;
-
+const id = "achivement";
   return  (   <div  className="myWrapper">
     <Header />
   < section id={`slider`} className="slider-element full-screen force-full-screen clearfix"
      style={{ height: "100vh" }}
     >
-      <BackgroundImage
+     <BackgroundImage
         Tag="section"
-        fluid={imageData}
+        fixed={imageData}
         className="section1Background"
         backgroundColor={`#040e18`}
+        loading="eager"
+        onLoad={data.dec
+        }
       >
 
-        <div className="notopmargin full-screen force-full-screen gradient ">
+        <div  className="notopmargin full-screen force-full-screen gradient ">
           <div className="container clearfix"  style={{width:"100%", marginLeft:"auto",marginRight:"auto" }}>
-            <div className="slider-caption dark slider-caption-left" style={{ top: "177.5px" }}>
+            <div id={`mainText`} className="slider-caption dark slider-caption-left" style={{ top: "177.5px" }}>
               <h2 className="font-primary ls5" data-animate="fadeIn"
                 style={{ color: "#303030" }} >{data.title}</h2>
               <Spring delay="500"
@@ -57,8 +78,11 @@ const imageData = data.background_image.childImageSharp.fluid;
               <a key="85" className="font-primary noborder ls1 topmargin-sm inline-block more-link text-white dark  d-sm-inline-block"
                 data-animate="fadeIn" data-delay="800" data-scrollto="#section-works" data-offset="0">
                 <ul key="92" style={{ marginLeft: "25px", fontSize: "1.1rem", color: "#333" }}>
-                 {data.achievements.map(element => {
-                   return <li  >{element.text}</li>
+                 {
+                 
+                 data.achievements.map((element,i) => {
+                  const d = id + i;
+                   return <li  key={d}>  {element.text}</li>
                  })}
                 </ul>
               </a>
@@ -80,14 +104,6 @@ const imageData = data.background_image.childImageSharp.fluid;
             </div>
           </div>
         </div>
-      </BackgroundImage>
-      <BackgroundImage
-        Tag="section"
-        fluid={imageData}
-        className="section1Background blurred-img"
-        backgroundColor={`#040e18`}
-      >
-
       </BackgroundImage>
     </section >
     <section id={`content`} className="nobg"  >
@@ -123,6 +139,14 @@ const imageData = data.background_image.childImageSharp.fluid;
   )}
 
 /*
+<BackgroundImage
+        Tag="section"
+        fluid={imageData}
+        className="section1Background blurred-img"
+        backgroundColor={`#040e18`}
+      >
+
+      </BackgroundImage>
 <li>Founding UK editor-in-chief, WIRED</li>
                   <li>600+ keynotes around the world</li>
                   <li>Adviser to  investor in 60+ tech startups</li>
@@ -138,45 +162,90 @@ image: file(relativePath: { eq: "DR1_edit.jpg" }) {
 
 
 const Section1Page = (a) => {
-const {data} = a;
-  const { markdownRemark } = data;
+  const { section1 } = useStaticQuery(
+    graphql`
+      query {
+        section1:  markdownRemark(frontmatter: {identifier: {eq: "section1"}}) {
+               frontmatter {
+                 background_image {
+                   childImageSharp {
+                    fluid(maxWidth: 2500, quality: 100) {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                   }
+                 }
+                 title
+                 subtitle
+                 identifier
+                 category
+                 booking
+                 achievements {
+                   text
+                 }
+                 second_title
+                 description1
+                 description2
+                 speaking_topics_link
+                 strong_text
+          
+               }
+             }
+      }
+    `
+  )
+section1.frontmatter.dec = a.dec;
+console.log(section1);
 
 
-
-
-  return <Section1Template {...data.markdownRemark.frontmatter} />;
+  return <Section1Template {...section1.frontmatter} />;
 
 }
 export default Section1Page
+//    ...GatsbyImageSharpFluid_withWebp_noBase64
+// 
+/*
+GatsbyImageSharpFixed
+GatsbyImageSharpFixed_noBase64
+GatsbyImageSharpFixed_tracedSVG
+GatsbyImageSharpFixed_withWebp
+GatsbyImageSharpFixed_withWebp_noBase64
+GatsbyImageSharpFixed_withWebp_tracedSVG
+Fluid images
+GatsbyImageSharpFluid
+GatsbyImageSharpFluid_noBase64
+GatsbyImageSharpFluid_tracedSVG
+GatsbyImageSharpFluid_withWebp
+GatsbyImageSharpFluid_withWebp_noBase64
 
-export const pageQuery = graphql`
-query {
-  markdownRemark(frontmatter: {identifier: {eq: "section1"}}) {
-    frontmatter {
-      background_image {
-        childImageSharp {
-          fluid (maxWidth: 3000,quality: 100){
-            ...GatsbyImageSharpFluid_withWebp_noBase64
-          }
-        }
-      }
-      title
-      subtitle
-      identifier
-      category
-      booking
-      achievements {
-        text
-      }
-      second_title
-      description1
-      description2
-      speaking_topics_link
-      strong_text
+*/
+// export const pageQuery = graphql`
+// query {
+//   markdownRemark(frontmatter: {identifier: {eq: "section1"}}) {
+//     frontmatter {
+//       background_image {
+//         childImageSharp {
+//           fluid (maxWidth: 3000,quality: 60){
+//             ...GatsbyImageSharpFluid_withWebp_noBase64
+//           }
+//         }
+//       }
+//       title
+//       subtitle
+//       identifier
+//       category
+//       booking
+//       achievements {
+//         text
+//       }
+//       second_title
+//       description1
+//       description2
+//       speaking_topics_link
+//       strong_text
 
-    }
-  }
+//     }
+//   }
       
-}
-`
+// }
+// `
 

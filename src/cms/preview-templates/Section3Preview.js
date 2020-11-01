@@ -49,55 +49,56 @@ import './../../../static/all_css/css/interior-design.css'
   
   
   
-   class Section3Preview extends React.Component {
+  //  class Section3Preview extends React.Component {
   
-     constructor(a) { 
-       super(a);
-       const { entry, getAsset } = a;
-          const da = entry.getIn(['data']).toJS();
-          this.state = da;
-          console.log("preview 3 is updating");
-          console.log(da.title);
-          this.forceUpdate();
-     }
-     componentDidUpdate = (b)=>{
+  //    constructor(a) { 
+  //      super(a);
+  //      const { entry, getAsset } = a;
+  //         const da = entry.getIn(['data']).toJS();
+  //         this.state = da;
+  //         console.log("preview 3 is updating");
+  //         console.log(da.title);
+  //         this.forceUpdate();
+  //    }
+  //    componentDidUpdate = (b)=>{
       
 
-     }
-     componentWillReceiveProps(n){
-      const da = n.entry.getIn(['data']).toJS();
-      this.setState(da);
-     }
-     render = ()=>{
-     // const data = this.props.entry.getIn(['data']).toJS();
-      return (
-        <section className="content-wrap bg-info  "  >
-     <div className="row" style={{margin:0,padding:0, display:"flex",height:"10vh", justifyContent:"center"}}>
-     <h1>  {this.state.title}</h1>
-     </div>
-     <div className="row ">
-       <div className="col bg-success" style={{alignItems:"center",borderRadius:"100px",margin:0,padding:0, display:"flex",height:"20vh", justifyContent:"center"}}>
-       {this.state.description}
-       </div>
-       <div className="col bg-success" style={{alignItems:"center",borderRadius:"100px",margin:0,padding:0, display:"flex",height:"20vh", justifyContent:"center"}}>
-       {this.state.description1}
-       </div>
-     </div>
+  //    }
+  //    componentWillReceiveProps(n){
+  //     const da = n.entry.getIn(['data']).toJS();
+  //     this.setState(da);
+  //    }
+  //    render = ()=>{
+  //    // const data = this.props.entry.getIn(['data']).toJS();
+  //     return (
+  //       <section className="content-wrap bg-info  "  >
+  //    <div className="row" style={{margin:0,padding:0, display:"flex",height:"10vh", justifyContent:"center"}}>
+  //    <h1>  {this.state.title}</h1>
+  //    </div>
+  //    <div className="row ">
+  //      <div className="col bg-success" style={{alignItems:"center",borderRadius:"100px",margin:0,padding:0, display:"flex",height:"20vh", justifyContent:"center"}}>
+  //      {this.state.description}
+  //      </div>
+  //      <div className="col bg-success" style={{alignItems:"center",borderRadius:"100px",margin:0,padding:0, display:"flex",height:"20vh", justifyContent:"center"}}>
+  //      {this.state.description1}
+  //      </div>
+  //    </div>
     
-    </section>
-      )
+  //   </section>
+  //     )
 
-     }
-   }
+  //    }
+  //  }
   
-// const  Section3Preview =  (a) =>{
-//     const { entry, getAsset } = a;
-//           const data = entry.getIn(['data']).toJS(); 
-          
+const  Section3Preview =  (a) =>{
+    const { entry, getAsset } = a;
+          const data = entry.getIn(['data']).toJS(); 
+          data.forPreview  = true;
+          console.log(data)
 
-//     return(
-//         <Section3Template {...data} />
+    return(
+        <Section3Template {...data} />
 
-//     )
-//   }
+    )
+  }
   export default Section3Preview

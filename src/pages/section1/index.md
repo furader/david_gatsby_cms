@@ -5,7 +5,7 @@ subtitle: The leading authority on technology’s impact on business
 second_title: "KEYNOTE TALKS &\n EVENT MODERATION"
 identifier: section1
 booking: Book David for your event
-background_image: /img/DR1_edit.jpg
+background_image: /img/DR1_edit-min.jpg
 achievements:
   - text: Founding UK editor-in-chief, WIRED
   - text: 600+ keynotes around the world

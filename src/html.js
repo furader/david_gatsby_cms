@@ -87,23 +87,14 @@ dangerouslySetInnerHTML={{
       
     jQuery(window).scroll(function() {
 
-	  console.log(jQuery);
-	  console.log($);
 			var pixs = jQuery(window).scrollTop(),
-				opacity = pixs / 650,
-				element = jQuery( '.blurred-img' ),
-				elementHeight = element.outerHeight(),
-        elementNextHeight = jQuery('#section-skills').outerHeight();
+				diff = pixs / 650,
+				element = $("#slider"),
+				mainText = $("#mainText");
+			var opacity = 1 - diff;
         console.log(opacity)
-        
-			if( ( elementHeight + elementNextHeight + 50 ) > pixs ) {
-				element.addClass('blurred-image-visible');
-				console.log("blured image visible")
-        element.css({ 'opacity': opacity });
-			} else {
-				console.log("blured image not visible");
-        element.removeClass('blurred-image-visible');
-			}
+		mainText.css({ 'opacity': opacity });
+			
 		});
         `,
   }}

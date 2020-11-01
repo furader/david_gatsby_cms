@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { useStaticQuery,graphql } from 'gatsby'
 import './../../static/all_css/style.css'
 import './../../static/all_css/css/custom.css'
 import './../../static/all_css/css/resume.css'
@@ -125,7 +125,7 @@ export class Section2Template extends React.Component {
               vid.openMe = pas;
               vid.forPreview = forPreview;
               if(vid.visible){
-              return <VideoModal {...vid} />
+              return <VideoModal key={vid.id} {...vid} />
               }else{
                 return;
               }
@@ -179,43 +179,71 @@ export class Section2Template extends React.Component {
 */
 
 const Section2Page = (a) => {
-  const { data } = a;
-  const { markdownRemark } = data;
-
-
-
-
-
-  return <Section2Template {...data.markdownRemark.frontmatter} />;
-
-}
-export default Section2Page
-
-export const pageQuery = graphql`
-query {
-  markdownRemark(frontmatter: {identifier: {eq: "section2"}}) {
-    frontmatter {
-      title
-      templateKey
-      identifier
-      testimonials {
-        author
-        quote
-      } 
-      videos {
-        location
-        source
-        thumbnail{
-          childImageSharp {
-            fluid (maxWidth: 3000,quality: 100){
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
-          }
-        }
-        video_title
+  const { section2 } = useStaticQuery(
+    graphql`
+      query {
+        section2: markdownRemark(frontmatter: {identifier: {eq: "section2"}}) {
+               frontmatter {
+                 title
+                 templateKey
+                 identifier
+                 testimonials {
+                   author
+                   quote
+                 } 
+                 videos {
+                   location
+                   source
+                   visible
+                   thumbnail{
+                     childImageSharp {
+                       fluid (maxWidth: 3000,quality: 100){
+                         ...GatsbyImageSharpFluid_withWebp_noBase64
+                       }
+                    }
+                   }
+                   video_title
+                 }
+               }
+             }
       }
-    }
-  }
-}
+    `
+  )
 
-`
+
+
+
+
+  return <Section2Template {...section2.frontmatter} />;
+
+}
+ export default Section2Page
+
+// export const pageQuery = graphql`
+// query {
+//   markdownRemark(frontmatter: {identifier: {eq: "section2"}}) {
+//     frontmatter {
+//       title
+//       templateKey
+//       identifier
+//       testimonials {
+//         author
+//         quote
+//       } 
+//       videos {
+//         location
+//         source
+//         thumbnail{
+//           childImageSharp {
+//             fluid (maxWidth: 3000,quality: 100){
+//               ...GatsbyImageSharpFluid_withWebp_noBase64
+//             }
+//           }
+//         }
+//         video_title
+//       }
+//     }
+//   }
+// }
+
+// `

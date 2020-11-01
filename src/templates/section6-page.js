@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { useStaticQuery,graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import './../../static/all_css/style.css'
 import './../../static/all_css/css/custom.css'
@@ -93,12 +93,12 @@ export class Section6Template extends React.Component {
           return (
           
           
-          <div className="caroCard"  >
+          <div key={i} className="caroCard"  >
                 <a href={da.link} style={{padding:"0", margin:"0", width:"100%", height:"100%"}}
                 target="_blank" >
             <div className="caroImageContainer">
               
-                <Image key={i}
+                <Image 
                 draggable={false}
                 src={"/img/" + da.thumbnail.relativePath}
               />
@@ -127,36 +127,53 @@ export class Section6Template extends React.Component {
 
 
 const Section6Page = (a) => {
-  const {data} = a;
-  const {markdownRemark} = data;
+  const { section6 } = useStaticQuery(
+    graphql`
+      query {
+        section6:  markdownRemark(frontmatter: {identifier: {eq: "section6"}}) {
+               frontmatter {
+                 title
+                 investments {
+                  link
+                  thumbnail{       
+                   id
+                   path:    absolutePath
+                   relativePath
+                   relativeDirectory
+                 }
+                  name
+                  location        
+                 }
+               }
+             }
+              }
+    `
+  )
 
 
-
-
-
-  return <Section6Template {...data.markdownRemark.frontmatter} />;
+  return <Section6Template {...section6.frontmatter} />;
 
 }
 export default Section6Page
 
-export const pageQuery = graphql`
-query {
-  markdownRemark(frontmatter: {identifier: {eq: "section6"}}) {
-    frontmatter {
-      title
-      investments {
-       link
-       thumbnail{       
-        id
-        path:    absolutePath
-        relativePath
-        relativeDirectory
-      }
-       name
-       location        
-      }
-    }
-  }
-}
+// export const pageQuery = graphql`
+// query {
+//   markdownRemark(frontmatter: {identifier: {eq: "section6"}}) {
+//     frontmatter {
+//       title
+//       investments {
+//        link
+//        thumbnail{       
+//         id
+//         path:    absolutePath
+//         relativePath
+//         relativeDirectory
+//       }
+//        name
+//        location        
+//       }
+//     }
+//   }
+// }
 
-`
+// `

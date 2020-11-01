@@ -51,23 +51,35 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Identifier, name: identifier, widget: "hidden"}    
           - {label: Description, name: description, widget: "string"}    
-          - {label: Description 1, name: description1, widget: "string"}
+          - {label: Description 1, name: description1, widget: "string"}    
+          - {label: Category, name: category, widget: "string"}  
+          - {label: Logos, name: logos, widget: list,fields: [{label: Logo, name: logo, widget: image}]}
       - file: "src/pages/section4/index.md" 
         label: "Section4 Page"
         name: "section4"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "section3-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "section4-page"}
           - {label: Title, name: title, widget: string}
           - {label: Identifier, name: identifier, widget: "hidden"}    
           - {label: Background_image, name: background_image, widget: image}
           - {label: Description, name: description, widget: "string"}    
           - {label: Description 1, name: description1, widget: "string"}
           - {label: Link for full bio, name: link_full_bio, widget: "string"}
+      - file: "src/pages/section5/index.md" 
+        label: "Section5 Page"
+        name: "section5"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "section5-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Identifier, name: identifier, widget: "hidden"}    
+          - {label: Background_image, name: background_image, widget: image}
+          - {label: Description, name: description, widget: "string"} 
+          - {label: Articles, name: articles, widget: list,fields: [{label: Name, name: text, widget: string}, {label: Link, name: link, widget: string}]}   
       - file: "src/pages/section6/index.md" 
         label: "Section6 Page"
         name: "section6"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "section3-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "section6-page"}
           - {label: Title, name: title, widget: string}
           - {label: Identifier, name: identifier, widget: "hidden"}    
           - {label: Category, name: category, widget: "string"}    

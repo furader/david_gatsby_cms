@@ -73,9 +73,35 @@
   height: 100vh;
   position: fixed !important;
   width: 100%; 
-  /* background: #FFF no-repeat top center; */
+   background: #FFF no-repeat top center; 
   background-size: cover;
    background-attachment: fixed;
+   resize: both;
+  overflow: hidden;
+}
+.section1Background:before, .section1Background:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #040e18;
+  transition: none;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: center top / cover no-repeat fixed rgb(255, 255, 255);
+  background-attachment: fixed;
+  background-clip: initial;
+  background-color: rgb(255, 255, 255);
+  background-image: initial;
+  background-origin: initial;
+  background-position-x: center;
+  background-position-y: top;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
 }
 
 
