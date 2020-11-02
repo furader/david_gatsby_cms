@@ -38,6 +38,8 @@ const id = "achivement";
   < section id={`slider`} className="slider-element full-screen force-full-screen clearfix"
      style={{ height: "100vh" }}
     >
+      
+      <div  className="notopmargin full-screen force-full-screen gradient ">
      <BackgroundImage
         Tag="section"
         fixed={imageData}
@@ -48,7 +50,6 @@ const id = "achivement";
         }
       >
 
-        <div  className="notopmargin full-screen force-full-screen gradient ">
           <div className="container clearfix"  style={{width:"100%", marginLeft:"auto",marginRight:"auto" }}>
             <div id={`mainText`} className="slider-caption dark slider-caption-left" style={{ top: "177.5px " }}>
               <h2 className="font-primary ls5" data-animate="fadeIn"
@@ -98,8 +99,9 @@ const id = "achivement";
                                 </Spring>
             </div>
           </div>
-        </div>
       </BackgroundImage>
+      
+      </div>
     </section >
     <section id={`content`} className="nobg"  >
     <div className="content-wrap nobottompadding nobg">

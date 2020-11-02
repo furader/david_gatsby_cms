@@ -61,7 +61,7 @@ export class VideoModal extends React.Component {
               { holder              }
           </a>
           <div className="portfolio-overlay">
-            <a  className="left-icon" data-toggle="modal"
+            <a  className="left-icon" data-toggle="modal" style={{cursor:"pointer"}}
               onClick={() =>{              
                 this.props.openMe(this.state.source)
               }}
